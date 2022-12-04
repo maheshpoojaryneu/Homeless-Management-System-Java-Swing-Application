@@ -49,7 +49,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         setLayout(null);
 
         userJButton.setBackground(new java.awt.Color(0, 0, 0));
-        userJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        userJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         userJButton.setForeground(new java.awt.Color(255, 255, 255));
         userJButton.setText("Manage User");
         userJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -62,7 +62,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         userJButton.setBounds(480, 510, 280, 60);
 
         manageEmployeeJButton.setBackground(new java.awt.Color(0, 0, 0));
-        manageEmployeeJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        manageEmployeeJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         manageEmployeeJButton.setForeground(new java.awt.Color(255, 255, 255));
         manageEmployeeJButton.setText("Manage Employee");
         manageEmployeeJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -75,7 +75,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         manageEmployeeJButton.setBounds(480, 420, 280, 60);
 
         manageOrganizationJButton.setBackground(new java.awt.Color(0, 0, 0));
-        manageOrganizationJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        manageOrganizationJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         manageOrganizationJButton.setForeground(new java.awt.Color(255, 255, 255));
         manageOrganizationJButton.setText("Manage Organization");
         manageOrganizationJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -92,12 +92,12 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         add(manageOrganizationJButton);
         manageOrganizationJButton.setBounds(480, 330, 280, 60);
 
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        enterpriseLabel.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel.setText("EnterPrise :");
         add(enterpriseLabel);
         enterpriseLabel.setBounds(500, 260, 170, 30);
 
-        valueLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        valueLabel.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         valueLabel.setText("<value>");
         add(valueLabel);
         valueLabel.setBounds(670, 260, 180, 40);

@@ -6,13 +6,23 @@ package userinterface.FoodRole;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
-import Business.Homeless.Homeless;
-import Business.Homeless.HomelessDirectory;
-import Business.Network.Network;
-import Business.Organization.FoodOrganization;
+import Business.FoodClothing.Food;
+import Business.FoodClothing.FoodInventory;
+//import Business.Homeless.Homeless;
+//import Business.Homeless.HomelessDirectory;
+//import Business.Network.Network;
+//import Business.Organization.FoodOrganization;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import java.awt.Component;
+import java.text.SimpleDateFormat;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import userinterface.MainJFrame;
+import static userinterface.MainJFrame.passwordField;
 
 /**
  *
@@ -22,23 +32,38 @@ public class FoodWorkAreaJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form FoodWorkAreaJPanel
-     */private JPanel userProcessContainer;
-    private FoodOrganization foodOrganization;
+     */
+    private JPanel userProcessContainer;
+    //private FoodOrganization foodOrganization;
     private Enterprise enterprise;
-    private UserAccount userAccount;
-    private HomelessDirectory homelessDirectory;
-    private Homeless homeless;
+   // private UserAccount userAccount;
+    //private HomelessDirectory homelessDirectory;
+    //private Homeless homeless;
     private EcoSystem business;
-    private Network network;
-    public FoodWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
+    //private Network network;
+    //private FoodInventory foodinventory;
+    
+    public FoodWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, EcoSystem business, FoodInventory foodinventory) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.userAccount = account;
-        this.foodOrganization = (FoodOrganization)organization;
+        //this.userProcessContainer = userProcessContainer;
+        //this.userAccount = account;
+        ///this.foodOrganization = (FoodOrganization)organization;
         this.enterprise = enterprise;
         this.business = business;
-        this.homelessDirectory = new HomelessDirectory();
-        
+        //this.homelessDirectory = new HomelessDirectory();
+      //  this.foodinventory= foodinventory;
+    /*  try{
+        if(foodOrganization.getFoodinventory().getFoodinventory()!= null)
+        {
+            populateTbl();
+        }
+      }
+      catch (NullPointerException e)
+      {
+          JOptionPane.showMessageDialog(null,e);
+      }
+      */
+      pop();
     }
 
     /**
@@ -51,69 +76,295 @@ public class FoodWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        homelessTbl = new javax.swing.JTable();
+        foodTbl = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        locationTxt = new javax.swing.JTextField();
+        quantityTxt = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        date = new com.toedter.calendar.JDateChooser();
+        jButton2 = new javax.swing.JButton();
+        backJButton = new javax.swing.JButton();
+        jComboBox2 = new javax.swing.JComboBox();
 
-        homelessTbl.setModel(new javax.swing.table.DefaultTableModel(
+        foodTbl.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        foodTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "ID", "Name", "Age", "Location", "Gender", "Clothing Required?", "Treatment Required?", "Food Required?", "Is Criminal?"
+                "Shelter", "Location", "DonatedOn", "Quantity"
             }
         ));
-        homelessTbl.setSelectionBackground(new java.awt.Color(0, 0, 0));
-        homelessTbl.addMouseListener(new java.awt.event.MouseAdapter() {
+        foodTbl.setSelectionBackground(new java.awt.Color(0, 0, 0));
+        foodTbl.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                homelessTblMouseClicked(evt);
+                foodTblMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(homelessTbl);
+        jScrollPane1.setViewportView(foodTbl);
+
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jLabel1.setText("Shelter:");
+
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jLabel2.setText("Location:");
+
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jLabel3.setText("Donated On:");
+
+        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jLabel6.setText("Quantity Provided:");
+
+        locationTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+
+        jButton1.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jButton1.setText("Donate");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jComboBox1.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cambridge", "Boston", "Wrentham", "New York", "Park Drive" }));
+
+        jButton2.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jButton2.setText("Update");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        backJButton.setBackground(new java.awt.Color(0, 0, 0));
+        backJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        backJButton.setForeground(new java.awt.Color(255, 255, 255));
+        backJButton.setText("<< Back");
+        backJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
+        backJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backJButtonActionPerformed(evt);
+            }
+        });
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Food Organization" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1750, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1750, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(13, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1750, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1))
+                        .addGap(58, 58, 58)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(locationTxt)
+                                    .addComponent(jComboBox1, 0, 136, Short.MAX_VALUE))
+                                .addGap(156, 156, 156)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel3))
+                                .addGap(42, 42, 42)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(quantityTxt)
+                                    .addComponent(date, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(46, 46, 46)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(84, 84, 84)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(726, 726, 726)
+                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 613, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1)
+                        .addComponent(jLabel3)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(locationTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(quantityTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(106, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void homelessTblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homelessTblMouseClicked
+    private void foodTblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_foodTblMouseClicked
 
-        int i = homelessTbl.getSelectedRow();
-        TableModel model = homelessTbl.getModel();
-        idTxt.setText(model.getValueAt(i,0).toString());
-        nameTxt.setText(model.getValueAt(i,1).toString());
+        int i = foodTbl.getSelectedRow();
+        TableModel model = foodTbl.getModel();
+        jComboBox1.setSelectedItem(model.getValueAt(i,0).toString());
+        locationTxt.setText(model.getValueAt(i,1).toString());
 
-        clothTxt.setText(model.getValueAt(i,5).toString());
-        treatmentTxt.setText(model.getValueAt(i,6).toString());
-        foodTxt.setText(model.getValueAt(i,7).toString());
-        criminalTxt.setText(model.getValueAt(i,8).toString());
-        ageTxt.setText(model.getValueAt(i,2).toString());
-        locationTxt.setText(model.getValueAt(i,3).toString());
-        genderTxt.setText(model.getValueAt(i,4).toString());
+        quantityTxt.setText(model.getValueAt(i,2).toString());
+        date.setDateFormatString(model.getValueAt(i,3).toString());
 
-    }//GEN-LAST:event_homelessTblMouseClicked
+    }//GEN-LAST:event_foodTblMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        
+        String shelter = jComboBox1.toString();
+      
+        String location = locationTxt.getText();
+        int quantity = Integer.parseInt(quantityTxt.getText());
+        
+        SimpleDateFormat dformat = new SimpleDateFormat("yyyy-MM-dd");
+        String donatedOn = dformat.format(date.getDate());
+        
+        MainJFrame mainframe = new MainJFrame();
+       String userName = mainframe.userNameJTextField.getText();
+     
+       Organization organization = (Organization) jComboBox2.getSelectedItem();
+       organization.getFoodinventory().addToInventory(shelter,location,quantity, userName, donatedOn);
+       JOptionPane.showMessageDialog(null, "Added");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        
+           
+        int selectedRowIndex = foodTbl.getSelectedRow();
+
+        if (selectedRowIndex<0)
+        {
+            JOptionPane.showMessageDialog(this,"Please select a row to edit!");
+            return;
+        }
+
+        DefaultTableModel model = (DefaultTableModel) foodTbl.getModel();
+        Food selectedDetail = (Food) model.getValueAt(selectedRowIndex,0);
+
+
+        String shelter = jComboBox1.toString();
+        String location = locationTxt.getText();
+        int quantity = Integer.parseInt(quantityTxt.getText());
+        SimpleDateFormat dformat = new SimpleDateFormat("yyyy-MM-dd");
+        String donatedOn = dformat.format(date.getDate());
+        
+       // int index=foodinventory.getFoodinventory().indexOf(selectedDetail);
+        //Food food= foodinventory.updateInventory(index, selectedDetail);
+        
+        MainJFrame mainframe = new MainJFrame();
+        String userName = mainframe.userNameJTextField.getText();
+
+        //food.setShelter(shelter);
+        //food.setLocation(location);
+        //food.setQuantity(quantity);
+        //food.setDonatedon(donatedOn);
+        //food.setProvidedby(userName);
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+        userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_backJButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable homelessTbl;
+    private javax.swing.JButton backJButton;
+    private com.toedter.calendar.JDateChooser date;
+    private javax.swing.JTable foodTbl;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox jComboBox2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField locationTxt;
+    private javax.swing.JTextField quantityTxt;
     // End of variables declaration//GEN-END:variables
+
+    private void populateTbl() {
+        
+       MainJFrame mainframe = new MainJFrame();
+       String userName = mainframe.userNameJTextField.getText();
+       char[] passwordCharArray = passwordField.getPassword();
+        String password = String.valueOf(passwordCharArray);
+       
+       UserAccount userAccount=business.getUserAccountDirectory().authenticateUser(userName, password);
+        
+        DefaultTableModel model = (DefaultTableModel) foodTbl.getModel();
+        model.setRowCount(0);
+        //Food food=new Food();
+        
+      /*  for (Food food : foodOrganization.getFoodinventory().getFoodinventory())
+        {
+            if(food.getProvidedby().equals(userAccount.getUsername()))
+            {
+            Object[] row = new Object[4];
+            row[0]=food.getShelter();
+            row[1]=food.getLocation();
+            row[1]=food.getDonatedon();
+            row[1]=food.getQuantity();
+            
+            model.addRow(row);
+            
+            }
+        }
+       
+       */
+    }
+    
+    
+
+    private void pop() {
+     jComboBox2.removeAllItems();
+
+        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) 
+        {
+            jComboBox2.addItem(organization);
+    
+    
+    }
+}
 }

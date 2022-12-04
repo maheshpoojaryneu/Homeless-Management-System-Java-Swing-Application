@@ -107,7 +107,7 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
 
         setLayout(null);
 
-        workRequestJTable.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        workRequestJTable.setFont(new java.awt.Font("Trebuchet MS", 3, 14)); // NOI18N
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -135,8 +135,6 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         workRequestJTable.setSelectionBackground(new java.awt.Color(0, 0, 0));
-        workRequestJTable.setShowHorizontalLines(false);
-        workRequestJTable.setShowVerticalLines(false);
         workRequestJTable.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 workRequestJTableKeyPressed(evt);
@@ -161,7 +159,7 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         assignJButton.setBounds(460, 240, 170, 40);
 
         doctorBtn.setBackground(new java.awt.Color(0, 0, 0));
-        doctorBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        doctorBtn.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         doctorBtn.setForeground(new java.awt.Color(255, 255, 255));
         doctorBtn.setText("Process");
         doctorBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -173,15 +171,15 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         add(doctorBtn);
         doctorBtn.setBounds(1100, 250, 160, 40);
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Lab Work Area");
-        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(102, 102, 102))); // NOI18N
+        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
         add(jLabel8);
         jLabel8.setBounds(0, 0, 1750, 80);
 
         refreshJButton.setBackground(new java.awt.Color(0, 0, 0));
-        refreshJButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        refreshJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         refreshJButton.setForeground(new java.awt.Color(255, 255, 255));
         refreshJButton.setText("Refresh");
         refreshJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -193,7 +191,6 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         add(refreshJButton);
         refreshJButton.setBounds(30, 100, 130, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\rachi\\Desktop\\Images Project\\labwork.jpg")); // NOI18N
         jLabel2.setText("jLabel2");
         add(jLabel2);
         jLabel2.setBounds(0, 0, 1750, 900);

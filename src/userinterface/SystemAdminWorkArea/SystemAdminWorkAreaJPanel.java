@@ -125,16 +125,16 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel1.setText("Selected Node:");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, 150, 30));
 
-        lblSelectedNode.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblSelectedNode.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         lblSelectedNode.setText("System Admin");
         jPanel2.add(lblSelectedNode, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 160, 160, 30));
 
         btnManageNetwork.setBackground(new java.awt.Color(0, 0, 0));
-        btnManageNetwork.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnManageNetwork.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         btnManageNetwork.setForeground(new java.awt.Color(255, 255, 255));
         btnManageNetwork.setText("Manage Network");
         btnManageNetwork.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -146,7 +146,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.add(btnManageNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, 250, 40));
 
         btnManageEnterprise.setBackground(new java.awt.Color(0, 0, 0));
-        btnManageEnterprise.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnManageEnterprise.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         btnManageEnterprise.setForeground(new java.awt.Color(255, 255, 255));
         btnManageEnterprise.setText("Manage Enterprise");
         btnManageEnterprise.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -158,7 +158,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.add(btnManageEnterprise, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 340, 290, 40));
 
         btnManageAdmin.setBackground(new java.awt.Color(0, 0, 0));
-        btnManageAdmin.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnManageAdmin.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         btnManageAdmin.setForeground(new java.awt.Color(255, 255, 255));
         btnManageAdmin.setText("Manage Enterprise Admin");
         btnManageAdmin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
@@ -170,7 +170,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         jPanel2.add(btnManageAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 420, 340, 30));
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("System Admin Work Area");
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 830, 90));

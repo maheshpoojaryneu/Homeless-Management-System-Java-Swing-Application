@@ -22,7 +22,10 @@ public abstract class WorkRequest {
     private int age;
     private String location;
     private String gender;
-
+    private int foodquantityrequired;
+    private int foodquantitydonated;
+    private String createddate;
+    
    
     
      private boolean cloth;
@@ -313,6 +316,30 @@ public abstract class WorkRequest {
 
     public void setResolveDate(Date resolveDate) {
         this.resolveDate = resolveDate;
+    }
+
+    public int getFoodquantityrequired() {
+        return foodquantityrequired;
+    }
+
+    public void setFoodquantityrequired(int foodquantityrequired) {
+        this.foodquantityrequired = foodquantityrequired;
+    }
+
+    public int getFoodquantitydonated() {
+        return foodquantitydonated;
+    }
+
+    public void setFoodquantitydonated(int foodquantitydonated) {
+        this.foodquantitydonated = foodquantitydonated;
+    }
+
+    public String getCreateddate() {
+        return createddate;
+    }
+
+    public void setCreateddate(String createddate) {
+        this.createddate = createddate;
     }
     
      

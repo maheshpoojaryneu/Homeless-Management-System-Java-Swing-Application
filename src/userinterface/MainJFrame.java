@@ -4,6 +4,9 @@ package userinterface;
 import Business.EcoSystem;
 import Business.DB4OUtil.DB4OUtil;
 import Business.Enterprise.Enterprise;
+import Business.Enterprise.EnterpriseDirectory;
+import Business.FoodClothing.ClothInventory;
+import Business.FoodClothing.FoodInventory;
 import Business.Homeless.HomelessDirectory;
 import Business.Network.Network;
 import Business.Organization.Organization;
@@ -11,6 +14,7 @@ import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import userinterface.volunteer.RegisterSelf;
 
 /**
  *
@@ -24,13 +28,22 @@ public class MainJFrame extends javax.swing.JFrame {
     private EcoSystem system;
     private  DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     private HomelessDirectory homelessdirectory;
+    private EnterpriseDirectory enterprisedirectory;
     //private DB4OUtil dB4OUtil;
+    JPanel userProcessContainer;
+    Enterprise enterprise;
+    private FoodInventory foodinventory;
+    private ClothInventory clothinventory;
     public MainJFrame() {
         initComponents();
         //this.dB4OUtil=new DB4OUtil();
         system = dB4OUtil.retrieveSystem();
         this.setSize(1680, 1050);
         this.homelessdirectory = new HomelessDirectory();
+        this.enterprisedirectory= new EnterpriseDirectory();
+        this.foodinventory= new FoodInventory();
+        this.clothinventory= new ClothInventory();
+        
     }
 
     /**
@@ -51,6 +64,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         loginJLabel = new javax.swing.JLabel();
         logoutJButton = new javax.swing.JButton();
+        signupJButton = new javax.swing.JButton();
         container = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -60,27 +74,47 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        loginJButton.setBackground(new java.awt.Color(255, 255, 255));
+        loginJButton.setBackground(new java.awt.Color(204, 204, 255));
+        loginJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         loginJButton.setText("Sign In");
-        loginJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        loginJButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         loginJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginJButtonActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        userNameJTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userNameJTextFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel1.setText("User Name");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel2.setText("Password");
 
-        logoutJButton.setBackground(new java.awt.Color(255, 255, 255));
+        logoutJButton.setBackground(new java.awt.Color(204, 204, 255));
+        logoutJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         logoutJButton.setText("Sign Out");
-        logoutJButton.setEnabled(false);
+        logoutJButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        logoutJButton.setDoubleBuffered(true);
         logoutJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 logoutJButtonActionPerformed(evt);
+            }
+        });
+
+        signupJButton.setBackground(new java.awt.Color(204, 204, 255));
+        signupJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        signupJButton.setText("Sign Up");
+        signupJButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        signupJButton.setDoubleBuffered(true);
+        signupJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signupJButtonActionPerformed(evt);
             }
         });
 
@@ -95,11 +129,13 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addComponent(passwordField, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(userNameJTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(logoutJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(loginJLabel))
-                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(signupJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(logoutJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(loginJLabel))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addComponent(loginJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -125,7 +161,9 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addComponent(loginJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(logoutJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(803, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(signupJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(755, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);
@@ -134,8 +172,6 @@ public class MainJFrame extends javax.swing.JFrame {
         container.setLayout(new java.awt.CardLayout());
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\rachi\\Desktop\\bg.jpg")); // NOI18N
 
         jLabel4.setBackground(new java.awt.Color(153, 204, 255));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 58)); // NOI18N
@@ -223,7 +259,7 @@ public class MainJFrame extends javax.swing.JFrame {
         }
         else{
             CardLayout layout=(CardLayout)container.getLayout();
-            container.add("workArea",userAccount.getRole().createWorkArea(container, userAccount, inOrganization, inEnterprise, system,homelessdirectory));
+            container.add("workArea",userAccount.getRole().createWorkArea(container, userAccount, inOrganization, inEnterprise, system,homelessdirectory, foodinventory, clothinventory));
             layout.next(container);
         }
         
@@ -249,6 +285,29 @@ public class MainJFrame extends javax.swing.JFrame {
         crdLyt.next(container);
         dB4OUtil.storeSystem(system);
     }//GEN-LAST:event_logoutJButtonActionPerformed
+
+    private void signupJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupJButtonActionPerformed
+        // TODO add your handling code here:
+        //RegisterSelf registerself  = new RegisterSelf(userProcessContainer, enterprise);
+        //userProcessContainer.add("RegisterSelf", registerself);
+
+   //     CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+     //   layout.next(userProcessContainer);
+        
+         CardLayout layout=(CardLayout)container.getLayout();
+         RegisterSelf registerself = new RegisterSelf(container,enterprise, enterprisedirectory);
+            container.add("RegisterSelf",registerself);
+           // userAccount.getRole().createWorkArea(container, userAccount, inOrganization, inEnterprise, system,homelessdirectory
+            layout.next(container);
+            loginJButton.setEnabled(false);
+        logoutJButton.setEnabled(true);
+            signupJButton.setEnabled(false);
+            
+    }//GEN-LAST:event_signupJButtonActionPerformed
+
+    private void userNameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameJTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userNameJTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -296,7 +355,8 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton loginJButton;
     private javax.swing.JLabel loginJLabel;
     private javax.swing.JButton logoutJButton;
-    private javax.swing.JPasswordField passwordField;
-    private javax.swing.JTextField userNameJTextField;
+    public static javax.swing.JPasswordField passwordField;
+    private javax.swing.JButton signupJButton;
+    public static javax.swing.JTextField userNameJTextField;
     // End of variables declaration//GEN-END:variables
 }

@@ -112,6 +112,7 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
+        homelessTbl.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         homelessTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null},
@@ -123,10 +124,7 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
                 "ID", "Name", "Age", "Location", "Gender", "Clothing Required?", "Treatment Required?", "Food Required?", "Is Criminal?"
             }
         ));
-        homelessTbl.setGridColor(new java.awt.Color(255, 255, 255));
         homelessTbl.setSelectionBackground(new java.awt.Color(0, 0, 0));
-        homelessTbl.setShowHorizontalLines(false);
-        homelessTbl.setShowVerticalLines(false);
         homelessTbl.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 homelessTblMouseClicked(evt);
@@ -138,6 +136,7 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
         jScrollPane1.setBounds(0, 80, 1750, 150);
 
         idTxt.setEditable(false);
+        idTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         idTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         idTxt.setEnabled(false);
         idTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -146,14 +145,15 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
             }
         });
         add(idTxt);
-        idTxt.setBounds(370, 630, 190, 40);
+        idTxt.setBounds(190, 380, 190, 40);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel3.setText("Message");
         add(jLabel3);
-        jLabel3.setBounds(280, 740, 80, 22);
+        jLabel3.setBounds(100, 490, 80, 21);
 
         nameTxt.setEditable(false);
+        nameTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         nameTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         nameTxt.setEnabled(false);
         nameTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -162,8 +162,9 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
             }
         });
         add(nameTxt);
-        nameTxt.setBounds(370, 680, 190, 40);
+        nameTxt.setBounds(190, 430, 190, 40);
 
+        messageJTextField.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         messageJTextField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         messageJTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,10 +172,10 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
             }
         });
         add(messageJTextField);
-        messageJTextField.setBounds(370, 730, 190, 40);
+        messageJTextField.setBounds(190, 480, 190, 40);
 
         requestTestJButton.setBackground(new java.awt.Color(0, 0, 0));
-        requestTestJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        requestTestJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         requestTestJButton.setForeground(new java.awt.Color(255, 255, 255));
         requestTestJButton.setText("Send To NGO");
         requestTestJButton.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -184,25 +185,28 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
             }
         });
         add(requestTestJButton);
-        requestTestJButton.setBounds(790, 850, 170, 33);
+        requestTestJButton.setBounds(610, 600, 170, 33);
 
         clothTxt.setEditable(false);
+        clothTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         clothTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         clothTxt.setEnabled(false);
         add(clothTxt);
-        clothTxt.setBounds(870, 630, 210, 40);
+        clothTxt.setBounds(690, 380, 210, 40);
 
         treatmentTxt.setEditable(false);
+        treatmentTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         treatmentTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         treatmentTxt.setEnabled(false);
         add(treatmentTxt);
-        treatmentTxt.setBounds(870, 680, 210, 40);
+        treatmentTxt.setBounds(690, 430, 210, 40);
 
         foodTxt.setEditable(false);
+        foodTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         foodTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         foodTxt.setEnabled(false);
         add(foodTxt);
-        foodTxt.setBounds(870, 730, 210, 40);
+        foodTxt.setBounds(690, 480, 210, 40);
 
         criminalTxt.setEditable(false);
         criminalTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
@@ -213,10 +217,10 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
             }
         });
         add(criminalTxt);
-        criminalTxt.setBounds(1340, 630, 210, 40);
+        criminalTxt.setBounds(1160, 380, 210, 40);
 
         addHomelessBtn.setBackground(new java.awt.Color(0, 0, 0));
-        addHomelessBtn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        addHomelessBtn.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         addHomelessBtn.setForeground(new java.awt.Color(255, 255, 255));
         addHomelessBtn.setText("Manage Homeless Person");
         addHomelessBtn.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -229,6 +233,7 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
         addHomelessBtn.setBounds(700, 250, 330, 40);
 
         ageTxt.setEditable(false);
+        ageTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         ageTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         ageTxt.setEnabled(false);
         ageTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -237,15 +242,14 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
             }
         });
         add(ageTxt);
-        ageTxt.setBounds(870, 780, 210, 40);
+        ageTxt.setBounds(690, 530, 210, 40);
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\rachi\\Desktop\\Images Project\\policeworkarea.jpeg")); // NOI18N
         jLabel11.setText("Request to NGO");
-        jLabel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(102, 102, 102))); // NOI18N
+        jLabel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
         add(jLabel11);
-        jLabel11.setBounds(0, 230, 1750, 370);
+        jLabel11.setBounds(-20, 140, 1750, 370);
 
         genderTxt.setEditable(false);
         genderTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
@@ -256,7 +260,7 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
             }
         });
         add(genderTxt);
-        genderTxt.setBounds(1340, 730, 210, 40);
+        genderTxt.setBounds(1160, 480, 210, 40);
 
         locationTxt.setEditable(false);
         locationTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
@@ -267,57 +271,57 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
             }
         });
         add(locationTxt);
-        locationTxt.setBounds(1340, 680, 210, 40);
+        locationTxt.setBounds(1160, 430, 210, 40);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel4.setText("Age");
         add(jLabel4);
-        jLabel4.setBounds(650, 790, 50, 20);
+        jLabel4.setBounds(470, 540, 50, 20);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel5.setText("Name");
         add(jLabel5);
-        jLabel5.setBounds(280, 690, 60, 22);
+        jLabel5.setBounds(100, 440, 60, 21);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel6.setText("ID");
         add(jLabel6);
-        jLabel6.setBounds(280, 640, 50, 22);
+        jLabel6.setBounds(100, 390, 50, 21);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel7.setText("Gender");
         add(jLabel7);
-        jLabel7.setBounds(1150, 740, 170, 20);
+        jLabel7.setBounds(970, 490, 170, 20);
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel8.setText("Treatment Required");
         add(jLabel8);
-        jLabel8.setBounds(650, 690, 190, 20);
+        jLabel8.setBounds(470, 440, 190, 20);
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel9.setText("Food Required");
         add(jLabel9);
-        jLabel9.setBounds(650, 740, 170, 20);
+        jLabel9.setBounds(470, 490, 170, 20);
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel10.setText("Clothing Required");
         add(jLabel10);
-        jLabel10.setBounds(650, 640, 170, 22);
+        jLabel10.setBounds(470, 390, 170, 21);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel12.setText("Criminal Record");
         add(jLabel12);
-        jLabel12.setBounds(1150, 640, 170, 20);
+        jLabel12.setBounds(970, 390, 170, 20);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel13.setText("Current Location");
         add(jLabel13);
-        jLabel13.setBounds(1150, 690, 170, 20);
+        jLabel13.setBounds(970, 440, 170, 20);
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText(" Homeless Person Request");
-        jLabel14.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(102, 102, 102))); // NOI18N
+        jLabel14.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
         add(jLabel14);
         jLabel14.setBounds(0, 0, 1750, 80);
     }// </editor-fold>//GEN-END:initComponents

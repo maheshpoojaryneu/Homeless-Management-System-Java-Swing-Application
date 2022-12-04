@@ -89,7 +89,7 @@ public class SendLabResultJPanel extends javax.swing.JPanel {
         setLayout(null);
 
         backJButton.setBackground(new java.awt.Color(0, 0, 0));
-        backJButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        backJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         backJButton.setForeground(new java.awt.Color(255, 255, 255));
         backJButton.setText("Back");
         backJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -101,18 +101,18 @@ public class SendLabResultJPanel extends javax.swing.JPanel {
         add(backJButton);
         backJButton.setBounds(40, 110, 116, 38);
 
-        resultJTextField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        resultJTextField.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         resultJTextField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         add(resultJTextField);
-        resultJTextField.setBounds(820, 200, 180, 30);
+        resultJTextField.setBounds(820, 200, 180, 29);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         jLabel1.setText("Result");
         add(jLabel1);
-        jLabel1.setBounds(610, 200, 75, 29);
+        jLabel1.setBounds(610, 200, 100, 29);
 
         submitJButton.setBackground(new java.awt.Color(0, 0, 0));
-        submitJButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        submitJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         submitJButton.setForeground(new java.awt.Color(255, 255, 255));
         submitJButton.setText("Submit Result");
         submitJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -125,14 +125,14 @@ public class SendLabResultJPanel extends javax.swing.JPanel {
         submitJButton.setBounds(700, 390, 131, 38);
 
         testTypeTxt.setEditable(false);
-        testTypeTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        testTypeTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         testTypeTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         testTypeTxt.setEnabled(false);
         add(testTypeTxt);
-        testTypeTxt.setBounds(820, 250, 180, 30);
+        testTypeTxt.setBounds(820, 250, 180, 29);
 
         costTxt.setEditable(false);
-        costTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        costTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         costTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         costTxt.setEnabled(false);
         costTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -141,25 +141,26 @@ public class SendLabResultJPanel extends javax.swing.JPanel {
             }
         });
         add(costTxt);
-        costTxt.setBounds(820, 300, 180, 30);
+        costTxt.setBounds(820, 300, 180, 29);
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Lab Request ");
         jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
         add(jLabel8);
         jLabel8.setBounds(0, 0, 1750, 80);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         jLabel4.setText("Test Type");
         add(jLabel4);
-        jLabel4.setBounds(610, 250, 116, 29);
+        jLabel4.setBounds(610, 250, 130, 29);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         jLabel5.setText("Total Cost");
         add(jLabel5);
         jLabel5.setBounds(610, 300, 121, 29);
 
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         jLabel2.setText("jLabel2");
         add(jLabel2);
         jLabel2.setBounds(0, 0, 1840, 890);

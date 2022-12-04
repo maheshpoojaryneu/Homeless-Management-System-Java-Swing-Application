@@ -98,7 +98,7 @@ public class AddHomelessPersonJPanel extends javax.swing.JPanel {
         clothingChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         clothingChk.setText("Clothing Required");
         add(clothingChk);
-        clothingChk.setBounds(1010, 610, 220, 31);
+        clothingChk.setBounds(1010, 610, 220, 26);
 
         treatmentChk.setBackground(new java.awt.Color(255, 255, 255));
         treatmentChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -109,14 +109,15 @@ public class AddHomelessPersonJPanel extends javax.swing.JPanel {
             }
         });
         add(treatmentChk);
-        treatmentChk.setBounds(1010, 670, 220, 31);
+        treatmentChk.setBounds(1010, 670, 220, 26);
 
         saveBtn.setBackground(new java.awt.Color(0, 0, 0));
-        saveBtn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        saveBtn.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         saveBtn.setForeground(new java.awt.Color(255, 255, 255));
         saveBtn.setText("Save Update");
         saveBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
         saveBtn.setEnabled(false);
+        saveBtn.setFocusPainted(false);
         saveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveBtnActionPerformed(evt);
@@ -125,6 +126,7 @@ public class AddHomelessPersonJPanel extends javax.swing.JPanel {
         add(saveBtn);
         saveBtn.setBounds(110, 190, 200, 40);
 
+        homelessTbl.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         homelessTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null},
@@ -137,8 +139,6 @@ public class AddHomelessPersonJPanel extends javax.swing.JPanel {
             }
         ));
         homelessTbl.setSelectionBackground(new java.awt.Color(0, 0, 0));
-        homelessTbl.setShowHorizontalLines(false);
-        homelessTbl.setShowVerticalLines(false);
         homelessTbl.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 homelessTblMouseClicked(evt);
@@ -150,7 +150,7 @@ public class AddHomelessPersonJPanel extends javax.swing.JPanel {
         jScrollPane1.setBounds(0, 400, 1750, 170);
 
         btnUpdate.setBackground(new java.awt.Color(0, 0, 0));
-        btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnUpdate.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
         btnUpdate.setText("Update Person Details");
         btnUpdate.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -166,10 +166,10 @@ public class AddHomelessPersonJPanel extends javax.swing.JPanel {
         foodChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         foodChk.setText("Food Required");
         add(foodChk);
-        foodChk.setBounds(1010, 730, 220, 31);
+        foodChk.setBounds(1010, 730, 220, 26);
 
         deleteBtn.setBackground(new java.awt.Color(0, 0, 0));
-        deleteBtn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        deleteBtn.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         deleteBtn.setForeground(new java.awt.Color(255, 255, 255));
         deleteBtn.setText("Delete Person");
         deleteBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -190,15 +190,15 @@ public class AddHomelessPersonJPanel extends javax.swing.JPanel {
             }
         });
         add(criminalChk);
-        criminalChk.setBounds(1010, 790, 220, 31);
+        criminalChk.setBounds(1010, 790, 220, 26);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel4.setText("Gender:");
         add(jLabel4);
         jLabel4.setBounds(560, 790, 100, 20);
 
         addHomelessBtn.setBackground(new java.awt.Color(0, 0, 0));
-        addHomelessBtn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        addHomelessBtn.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         addHomelessBtn.setForeground(new java.awt.Color(255, 255, 255));
         addHomelessBtn.setText("Add Homeless Person");
         addHomelessBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -231,31 +231,30 @@ public class AddHomelessPersonJPanel extends javax.swing.JPanel {
         txtGender.setBounds(660, 790, 240, 30);
 
         jLabel11.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Manage Homeless Person");
-        jLabel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(102, 102, 102))); // NOI18N
+        jLabel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
         add(jLabel11);
         jLabel11.setBounds(0, 0, 1750, 80);
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel8.setText("Name:");
         add(jLabel8);
         jLabel8.setBounds(560, 610, 100, 30);
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel10.setText("Age:");
         add(jLabel10);
-        jLabel10.setBounds(560, 670, 100, 22);
+        jLabel10.setBounds(560, 670, 100, 21);
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel12.setText("Location:");
         add(jLabel12);
         jLabel12.setBounds(560, 730, 100, 20);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\rachi\\Desktop\\Images Project\\homelessmanage.jpg")); // NOI18N
         jLabel13.setText("Request to NGO");
         add(jLabel13);
         jLabel13.setBounds(-10, 0, 2140, 400);

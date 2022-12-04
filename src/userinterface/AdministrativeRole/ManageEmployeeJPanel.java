@@ -92,7 +92,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
 
         jScrollPane1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        organizationJTable.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        organizationJTable.setFont(new java.awt.Font("Trebuchet MS", 3, 14)); // NOI18N
         organizationJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -117,7 +117,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             }
         });
         organizationJTable.setGridColor(new java.awt.Color(0, 0, 0));
-        organizationJTable.setSelectionBackground(new java.awt.Color(0, 0, 0));
+        organizationJTable.setSelectionBackground(new java.awt.Color(204, 204, 255));
         jScrollPane1.setViewportView(organizationJTable);
         if (organizationJTable.getColumnModel().getColumnCount() > 0) {
             organizationJTable.getColumnModel().getColumn(0).setResizable(false);
@@ -128,9 +128,9 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         jScrollPane1.setBounds(410, 290, 480, 140);
 
         addJButton.setBackground(new java.awt.Color(0, 0, 0));
-        addJButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        addJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         addJButton.setForeground(new java.awt.Color(255, 255, 255));
-        addJButton.setText("Create Employee");
+        addJButton.setText("Create Entity/Employee");
         addJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
         addJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,9 +138,9 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             }
         });
         add(addJButton);
-        addJButton.setBounds(570, 590, 170, 40);
+        addJButton.setBounds(570, 590, 250, 40);
 
-        organizationJComboBox.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        organizationJComboBox.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationJComboBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -152,7 +152,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         organizationJComboBox.setBounds(640, 220, 213, 40);
 
         backJButton.setBackground(new java.awt.Color(0, 0, 0));
-        backJButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        backJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         backJButton.setForeground(new java.awt.Color(255, 255, 255));
         backJButton.setText("<< Back");
         backJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -169,30 +169,30 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         add(nameJTextField);
         nameJTextField.setBounds(640, 530, 210, 30);
 
-        organizationEmpJComboBox.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        organizationEmpJComboBox.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         organizationEmpJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationEmpJComboBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         add(organizationEmpJComboBox);
         organizationEmpJComboBox.setBounds(640, 470, 210, 40);
 
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        enterpriseLabel.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel.setText("Name");
         add(enterpriseLabel);
         enterpriseLabel.setBounds(440, 530, 170, 30);
 
-        enterpriseLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        enterpriseLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel1.setText("Organization");
         add(enterpriseLabel1);
         enterpriseLabel1.setBounds(450, 220, 170, 40);
 
-        enterpriseLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        enterpriseLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel2.setText("Organization");
         add(enterpriseLabel2);
         enterpriseLabel2.setBounds(440, 470, 170, 30);
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("Manage Employee");
+        jLabel12.setText("Manage Entity/Employee");
         add(jLabel12);
         jLabel12.setBounds(350, 60, 610, 80);
 

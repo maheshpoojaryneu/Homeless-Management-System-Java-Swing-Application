@@ -55,6 +55,17 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 //                organizationJComboBox.addItem(type);
 //        }
     }
+          else if(x.equals("Food"))
+        {
+            for (Type type : Organization.Type.values()){
+            if (!type.getValue().equals(Type.Admin.getValue()) && !type.getValue().equals(Type.Doctor.getValue()) && !type.getValue().equals(Type.Lab.getValue()) && !type.getValue().equals(Type.Billing.getValue()) && !type.getValue().equals(Type.ClothingOutlet.getValue()) && !type.getValue().equals(Type.Police.getValue()) && !type.getValue().equals(Type.NGO.getValue()) )
+                organizationJComboBox.addItem(type);
+        }
+//        for (Type type : Organization.Type.values()){
+//            if (!type.getValue().equals(Type.Admin.getValue()) && !type.getValue().equals(Type.Lab.getValue()))
+//                organizationJComboBox.addItem(type);
+//        }
+    }
     }
 
     private void populateTable(){
@@ -92,6 +103,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
+        organizationJTable.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         organizationJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -126,10 +138,10 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         jScrollPane1.setBounds(490, 240, 520, 120);
 
         addJButton.setBackground(new java.awt.Color(0, 0, 0));
-        addJButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        addJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         addJButton.setForeground(new java.awt.Color(255, 255, 255));
         addJButton.setText("Add Organization");
-        addJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
+        addJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         addJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addJButtonActionPerformed(evt);
@@ -138,7 +150,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         add(addJButton);
         addJButton.setBounds(650, 480, 180, 40);
 
-        organizationJComboBox.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        organizationJComboBox.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationJComboBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         add(organizationJComboBox);
@@ -157,12 +169,13 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         add(backJButton);
         backJButton.setBounds(350, 800, 150, 40);
 
-        enterpriseLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        enterpriseLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel2.setText("Organization Type");
         add(enterpriseLabel2);
         enterpriseLabel2.setBounds(520, 410, 230, 30);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("jLabel3");
         jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 6));

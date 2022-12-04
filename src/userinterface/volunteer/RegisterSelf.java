@@ -3,7 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package userinterface.volunteer;
-
+import Business.Employee.Employee;
+import Business.Enterprise.Enterprise;
+import Business.Enterprise.EnterpriseDirectory;
+import Business.Organization.Organization;
+import Business.Role.Role;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 /**
  *
  * @author mahes
@@ -13,8 +21,18 @@ public class RegisterSelf extends javax.swing.JPanel {
     /**
      * Creates new form RegisterSelf
      */
-    public RegisterSelf() {
+    private EnterpriseDirectory enterprisedirectory;
+    private Object organization;
+     private JPanel container;
+    private Enterprise enterprise;
+    
+    public RegisterSelf(JPanel container, Enterprise enterprise, EnterpriseDirectory enterprisedirectory) {
         initComponents();
+        this.enterprise = enterprise;
+        this.container = container;
+        this.enterprisedirectory=enterprisedirectory;
+        
+
     }
 
     /**
@@ -26,19 +44,228 @@ public class RegisterSelf extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        enterpriseLabel3 = new javax.swing.JLabel();
+        enterpriseJComboBox = new javax.swing.JComboBox();
+        enterpriseLabel4 = new javax.swing.JLabel();
+        orgJComboBox = new javax.swing.JComboBox();
+        enterpriseLabel6 = new javax.swing.JLabel();
+        nameJTextField = new javax.swing.JTextField();
+        enterpriseLabel2 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        createUserJButton = new javax.swing.JButton();
+        RoleLabel = new javax.swing.JLabel();
+        roleJComboBox = new javax.swing.JComboBox();
+
+        enterpriseLabel3.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        enterpriseLabel3.setText("Enterprise");
+
+        enterpriseJComboBox.setFont(new java.awt.Font("Trebuchet MS", 2, 18)); // NOI18N
+        enterpriseJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Food", "Clothing", "Self" }));
+        enterpriseJComboBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        enterpriseJComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enterpriseJComboBoxActionPerformed(evt);
+            }
+        });
+
+        enterpriseLabel4.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        enterpriseLabel4.setText("Organization");
+
+        orgJComboBox.setFont(new java.awt.Font("Trebuchet MS", 2, 18)); // NOI18N
+        orgJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        orgJComboBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        orgJComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                orgJComboBoxActionPerformed(evt);
+            }
+        });
+
+        enterpriseLabel6.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        enterpriseLabel6.setText("User Name");
+
+        nameJTextField.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        nameJTextField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+
+        enterpriseLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        enterpriseLabel2.setText("Password");
+
+        jPasswordField1.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        jPasswordField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+
+        createUserJButton.setBackground(new java.awt.Color(0, 0, 0));
+        createUserJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        createUserJButton.setForeground(new java.awt.Color(255, 255, 255));
+        createUserJButton.setText("Create");
+        createUserJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
+        createUserJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createUserJButtonActionPerformed(evt);
+            }
+        });
+
+        RoleLabel.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        RoleLabel.setText("Role");
+
+        roleJComboBox.setFont(new java.awt.Font("Trebuchet MS", 2, 18)); // NOI18N
+        roleJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        roleJComboBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        roleJComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roleJComboBoxActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 786, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(221, 221, 221)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(enterpriseLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(enterpriseLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(enterpriseLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(enterpriseLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(RoleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(roleJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(orgJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(enterpriseJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(320, 320, 320)
+                        .addComponent(createUserJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(216, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 596, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(142, 142, 142)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(enterpriseLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(enterpriseJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(roleJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(enterpriseLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(orgJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(RoleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(enterpriseLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(enterpriseLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addComponent(createUserJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(144, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void enterpriseJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterpriseJComboBoxActionPerformed
+        Enterprise enterprise = (Enterprise) enterpriseJComboBox.getSelectedItem();
+        if (enterprise != null){
+           
+            populateOrgComboBox(enterprise);
+            
+        }
+    }//GEN-LAST:event_enterpriseJComboBoxActionPerformed
+
+    private void createUserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonActionPerformed
+        if (nameJTextField.getText()==null || nameJTextField.getText().equals("")){
+            JOptionPane.showMessageDialog(null,"Username field can not be blank");
+        }
+        if (jPasswordField1.getText()==null || jPasswordField1.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Password field should not be blank");
+        }
+        if(!name()){
+
+            JOptionPane.showMessageDialog(null, "Password should have atleast 1 special character and 5 characters long");
+            
+        }
+        else{
+            String userName = nameJTextField.getText();
+            String password = jPasswordField1.getText();
+            Organization organization = (Organization) orgJComboBox.getSelectedItem();
+            Employee employee = (Employee) enterpriseJComboBox.getSelectedItem();
+            Role role = (Role) roleJComboBox.getSelectedItem();
+            organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
+
+         
+            JOptionPane.showMessageDialog(null,"User Created Successfully");
+        }
+    }//GEN-LAST:event_createUserJButtonActionPerformed
+
+    private void orgJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orgJComboBoxActionPerformed
+        // TODO add your handling code here:
+        Organization organization = (Organization) orgJComboBox.getSelectedItem();
+        if (organization != null){
+            
+            populateRoleComboBox(organization);
+        }
+    }//GEN-LAST:event_orgJComboBoxActionPerformed
+
+    private void roleJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roleJComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_roleJComboBoxActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel RoleLabel;
+    private javax.swing.JButton createUserJButton;
+    private javax.swing.JComboBox enterpriseJComboBox;
+    private javax.swing.JLabel enterpriseLabel2;
+    private javax.swing.JLabel enterpriseLabel3;
+    private javax.swing.JLabel enterpriseLabel4;
+    private javax.swing.JLabel enterpriseLabel6;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JTextField nameJTextField;
+    private javax.swing.JComboBox orgJComboBox;
+    private javax.swing.JComboBox roleJComboBox;
     // End of variables declaration//GEN-END:variables
+
+    private void populateEntComboBox() {
+        enterpriseJComboBox.removeAllItems();
+        
+        for ( Enterprise enterprise : enterprisedirectory.getEnterpriseList())
+                {
+                    //!enterprise.getName().equals("Governement") &&
+                    //if( !enterprise.getName().equals("Hospital"))
+            enterpriseJComboBox.addItem(enterprise);
+        }
+    }
+
+    private void populateOrgComboBox(Enterprise enterprise) {
+         orgJComboBox.removeAllItems();
+        
+       for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
+            orgJComboBox.addItem(organization);
+        }
+    }
+    private void populateRoleComboBox(Organization organization){
+        roleJComboBox.removeAllItems();
+        for (Role role : organization.getSupportedRole()){
+            roleJComboBox.addItem(role);
+        }
+    }
+   
+    
+     private boolean name()
+     {
+         Pattern p = Pattern.compile("^(?=.*?[#?!@$%^&*-]).{5,}$");
+                Matcher m =p.matcher(jPasswordField1.getText());
+                boolean b = m.matches();
+                return b;
+     }
+
+    
 }

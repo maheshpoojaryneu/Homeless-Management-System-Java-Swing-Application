@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class FoodOrganization extends Organization{
 
     public FoodOrganization() {
-        super(Organization.Type.Food.getValue());
+        super(Organization.Type.Restaurant.getValue());
     }
 
     @Override

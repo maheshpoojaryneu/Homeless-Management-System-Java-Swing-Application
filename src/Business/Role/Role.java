@@ -3,6 +3,8 @@ package Business.Role;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
+import Business.FoodClothing.ClothInventory;
+import Business.FoodClothing.FoodInventory;
 import Business.Homeless.HomelessDirectory;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
@@ -46,7 +48,9 @@ public abstract class Role {
             Organization organization, 
             Enterprise enterprise, 
             EcoSystem business,
-            HomelessDirectory homelessdirectory);
+            HomelessDirectory homelessdirectory,
+            FoodInventory foodinventory,
+            ClothInventory clothinventory);
 
     @Override
     public String toString() {

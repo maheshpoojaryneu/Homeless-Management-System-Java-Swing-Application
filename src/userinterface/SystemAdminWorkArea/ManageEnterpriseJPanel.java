@@ -89,6 +89,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
+        enterpriseJTable.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         enterpriseJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -114,40 +115,40 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         add(jScrollPane1);
         jScrollPane1.setBounds(370, 200, 550, 110);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel1.setText("Network");
         add(jLabel1);
-        jLabel1.setBounds(480, 380, 130, 22);
+        jLabel1.setBounds(480, 380, 130, 21);
 
-        networkJComboBox.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        networkJComboBox.setFont(new java.awt.Font("Trebuchet MS", 2, 18)); // NOI18N
         networkJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         networkJComboBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         add(networkJComboBox);
-        networkJComboBox.setBounds(660, 380, 180, 34);
+        networkJComboBox.setBounds(660, 380, 180, 33);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel2.setText("Name");
         add(jLabel2);
-        jLabel2.setBounds(480, 490, 110, 22);
+        jLabel2.setBounds(480, 490, 110, 21);
 
-        nameJTextField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        nameJTextField.setFont(new java.awt.Font("Trebuchet MS", 2, 18)); // NOI18N
         nameJTextField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         add(nameJTextField);
-        nameJTextField.setBounds(660, 490, 180, 30);
+        nameJTextField.setBounds(660, 490, 180, 29);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel3.setText("Enterprise Type");
         add(jLabel3);
-        jLabel3.setBounds(480, 440, 170, 22);
+        jLabel3.setBounds(480, 440, 170, 21);
 
-        enterpriseTypeJComboBox.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        enterpriseTypeJComboBox.setFont(new java.awt.Font("Trebuchet MS", 2, 18)); // NOI18N
         enterpriseTypeJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         enterpriseTypeJComboBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         add(enterpriseTypeJComboBox);
-        enterpriseTypeJComboBox.setBounds(660, 440, 180, 34);
+        enterpriseTypeJComboBox.setBounds(660, 440, 180, 33);
 
         submitJButton.setBackground(new java.awt.Color(0, 0, 0));
-        submitJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        submitJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         submitJButton.setForeground(new java.awt.Color(255, 255, 255));
         submitJButton.setText("Submit");
         submitJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -160,7 +161,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         submitJButton.setBounds(590, 570, 120, 40);
 
         backJButton.setBackground(new java.awt.Color(0, 0, 0));
-        backJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        backJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         backJButton.setForeground(new java.awt.Color(255, 255, 255));
         backJButton.setText("<< Back");
         backJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -172,7 +173,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         add(backJButton);
         backJButton.setBounds(320, 770, 130, 40);
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Manage Enterprise");
         add(jLabel12);

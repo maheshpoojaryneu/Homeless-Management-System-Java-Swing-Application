@@ -95,7 +95,7 @@ public class ProcessNGORequestJPanel extends javax.swing.JPanel {
         setLayout(null);
 
         submitJButton.setBackground(new java.awt.Color(0, 0, 0));
-        submitJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        submitJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         submitJButton.setForeground(new java.awt.Color(255, 255, 255));
         submitJButton.setText("Send To Doctor");
         submitJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -107,17 +107,17 @@ public class ProcessNGORequestJPanel extends javax.swing.JPanel {
         add(submitJButton);
         submitJButton.setBounds(390, 690, 230, 40);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel1.setText("Result");
         add(jLabel1);
-        jLabel1.setBounds(450, 590, 110, 22);
+        jLabel1.setBounds(450, 590, 110, 21);
 
-        resultJTextField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        resultJTextField.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         add(resultJTextField);
-        resultJTextField.setBounds(650, 590, 130, 28);
+        resultJTextField.setBounds(650, 590, 130, 27);
 
         backJButton.setBackground(new java.awt.Color(0, 0, 0));
-        backJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        backJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         backJButton.setForeground(new java.awt.Color(255, 255, 255));
         backJButton.setText("Back");
         backJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -129,107 +129,112 @@ public class ProcessNGORequestJPanel extends javax.swing.JPanel {
         add(backJButton);
         backJButton.setBounds(220, 120, 90, 40);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel2.setText("Name");
         add(jLabel2);
         jLabel2.setBounds(450, 270, 120, 26);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel3.setText("ID");
         add(jLabel3);
         jLabel3.setBounds(450, 230, 120, 26);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel4.setText("Age");
         add(jLabel4);
         jLabel4.setBounds(450, 310, 120, 26);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel5.setText("Gender");
         add(jLabel5);
         jLabel5.setBounds(450, 390, 120, 26);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel6.setText("Location");
         add(jLabel6);
         jLabel6.setBounds(450, 350, 120, 26);
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel7.setText("Treatment Required?");
         add(jLabel7);
         jLabel7.setBounds(450, 470, 250, 26);
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel8.setText("Clothing Required?");
         add(jLabel8);
         jLabel8.setBounds(450, 430, 230, 26);
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel9.setText("Food Required?");
         add(jLabel9);
         jLabel9.setBounds(450, 510, 200, 26);
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel10.setText("Is Criminal?");
         add(jLabel10);
         jLabel10.setBounds(450, 550, 200, 26);
 
         idTxt.setEditable(false);
-        idTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        idTxt.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         idTxt.setEnabled(false);
         add(idTxt);
-        idTxt.setBounds(650, 230, 130, 28);
+        idTxt.setBounds(650, 230, 130, 27);
 
         nameTxt.setEditable(false);
-        nameTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        nameTxt.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         nameTxt.setEnabled(false);
         add(nameTxt);
-        nameTxt.setBounds(650, 270, 130, 28);
+        nameTxt.setBounds(650, 270, 130, 27);
 
         ageTxt.setEditable(false);
-        ageTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ageTxt.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         ageTxt.setEnabled(false);
         add(ageTxt);
-        ageTxt.setBounds(650, 310, 130, 28);
+        ageTxt.setBounds(650, 310, 130, 27);
 
         locationTxt.setEditable(false);
-        locationTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        locationTxt.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         locationTxt.setEnabled(false);
         add(locationTxt);
-        locationTxt.setBounds(650, 350, 130, 28);
+        locationTxt.setBounds(650, 350, 130, 27);
 
         gendertxt.setEditable(false);
-        gendertxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        gendertxt.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         gendertxt.setEnabled(false);
         add(gendertxt);
-        gendertxt.setBounds(650, 390, 130, 28);
+        gendertxt.setBounds(650, 390, 130, 27);
 
         clothTxt.setEditable(false);
-        clothTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        clothTxt.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         clothTxt.setEnabled(false);
         add(clothTxt);
-        clothTxt.setBounds(650, 430, 130, 28);
+        clothTxt.setBounds(650, 430, 130, 27);
 
         treatmentTxt.setEditable(false);
-        treatmentTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        treatmentTxt.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         treatmentTxt.setEnabled(false);
         add(treatmentTxt);
-        treatmentTxt.setBounds(650, 470, 130, 28);
+        treatmentTxt.setBounds(650, 470, 130, 27);
 
         foodTxt.setEditable(false);
-        foodTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        foodTxt.setFont(new java.awt.Font("Trebuchet MS", 2, 18)); // NOI18N
         foodTxt.setEnabled(false);
+        foodTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                foodTxtActionPerformed(evt);
+            }
+        });
         add(foodTxt);
-        foodTxt.setBounds(650, 510, 130, 28);
+        foodTxt.setBounds(650, 510, 130, 27);
 
         criminalTxt.setEditable(false);
-        criminalTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        criminalTxt.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         criminalTxt.setEnabled(false);
         add(criminalTxt);
-        criminalTxt.setBounds(650, 550, 130, 28);
+        criminalTxt.setBounds(650, 550, 130, 27);
 
         btnBilling.setBackground(new java.awt.Color(0, 0, 0));
-        btnBilling.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnBilling.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         btnBilling.setForeground(new java.awt.Color(255, 255, 255));
         btnBilling.setText("Sent To Billing");
         btnBilling.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -510,6 +515,10 @@ Logger logger = Logger.getLogger("MyLog");
     
     
     }//GEN-LAST:event_btnBillingActionPerformed
+
+    private void foodTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_foodTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_foodTxtActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ageTxt;

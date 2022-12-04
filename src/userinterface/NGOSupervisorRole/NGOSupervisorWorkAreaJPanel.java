@@ -152,7 +152,7 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        workRequestJTable.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        workRequestJTable.setFont(new java.awt.Font("Trebuchet MS", 3, 14)); // NOI18N
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -176,7 +176,6 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        workRequestJTable.setGridColor(new java.awt.Color(255, 255, 255));
         workRequestJTable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 workRequestJTableMouseClicked(evt);
@@ -204,7 +203,6 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 1510, 150));
 
-        assignJButton.setBackground(new java.awt.Color(255, 255, 255));
         assignJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         assignJButton.setText("Assign to me");
         assignJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -215,7 +213,6 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 340, 180, -1));
 
-        processJButton.setBackground(new java.awt.Color(255, 255, 255));
         processJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         processJButton.setText("Process");
         processJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -226,8 +223,7 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 840, 160, -1));
 
-        refreshJButton.setBackground(new java.awt.Color(255, 255, 255));
-        refreshJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        refreshJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         refreshJButton.setText("Refresh");
         refreshJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
         refreshJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -237,8 +233,7 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 110, -1));
 
-        provideFood.setBackground(new java.awt.Color(255, 255, 255));
-        provideFood.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        provideFood.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         provideFood.setText("Provide Food");
         provideFood.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
         provideFood.addActionListener(new java.awt.event.ActionListener() {
@@ -248,7 +243,6 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(provideFood, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 430, -1, -1));
 
-        provideClothing.setBackground(new java.awt.Color(255, 255, 255));
         provideClothing.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         provideClothing.setText("Provide Clothing");
         provideClothing.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -270,31 +264,26 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         breakfastChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         breakfastChk.setForeground(new java.awt.Color(255, 255, 255));
         breakfastChk.setText("Breakfast");
-        breakfastChk.setOpaque(false);
         add(breakfastChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 560, -1, -1));
 
         lunchChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lunchChk.setForeground(new java.awt.Color(255, 255, 255));
         lunchChk.setText("Lunch");
-        lunchChk.setOpaque(false);
         add(lunchChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 600, -1, -1));
 
         snacksChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         snacksChk.setForeground(new java.awt.Color(255, 255, 255));
         snacksChk.setText("Snacks");
-        snacksChk.setOpaque(false);
         add(snacksChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 640, -1, -1));
 
         dinnerChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         dinnerChk.setForeground(new java.awt.Color(255, 255, 255));
         dinnerChk.setText("Dinner");
-        dinnerChk.setOpaque(false);
         add(dinnerChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 680, -1, -1));
 
-        saveBtn.setBackground(new java.awt.Color(255, 255, 255));
-        saveBtn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        saveBtn.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         saveBtn.setText("Save");
-        saveBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
+        saveBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         saveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveBtnActionPerformed(evt);
@@ -310,8 +299,7 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         jLabel2.setText("Total Cost");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 610, -1, -1));
 
-        calculateCostBtn.setBackground(new java.awt.Color(255, 255, 255));
-        calculateCostBtn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        calculateCostBtn.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         calculateCostBtn.setText("Calculate Cost");
         calculateCostBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
         calculateCostBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -324,25 +312,21 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         jacketChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jacketChk.setForeground(new java.awt.Color(255, 255, 255));
         jacketChk.setText("Jacket");
-        jacketChk.setOpaque(false);
         add(jacketChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 550, -1, -1));
 
         topWearChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         topWearChk.setForeground(new java.awt.Color(255, 255, 255));
         topWearChk.setText("Top Wear");
-        topWearChk.setOpaque(false);
         add(topWearChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 600, -1, -1));
 
         bottomWearChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         bottomWearChk.setForeground(new java.awt.Color(255, 255, 255));
         bottomWearChk.setText("Bottom Wear");
-        bottomWearChk.setOpaque(false);
         add(bottomWearChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 650, -1, -1));
 
         thermalChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         thermalChk.setForeground(new java.awt.Color(255, 255, 255));
         thermalChk.setText("Thermals");
-        thermalChk.setOpaque(false);
         add(thermalChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 700, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -353,7 +337,6 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         daysTxt1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add(daysTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 490, 130, -1));
 
-        saveBtn1.setBackground(new java.awt.Color(255, 255, 255));
         saveBtn1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         saveBtn1.setText("Save");
         saveBtn1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -372,7 +355,6 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         jLabel4.setText("Total Cost");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1250, 610, -1, -1));
 
-        calculateCostBtn1.setBackground(new java.awt.Color(255, 255, 255));
         calculateCostBtn1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         calculateCostBtn1.setText("Calculate Cost");
         calculateCostBtn1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -386,10 +368,9 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("NGO Work Area");
-        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(102, 102, 102))); // NOI18N
+        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1750, 70));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\rachi\\Desktop\\Images Project\\ngo1.jpg")); // NOI18N
         jLabel5.setText("jLabel5");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1750, 830));
     }// </editor-fold>//GEN-END:initComponents

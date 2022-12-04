@@ -106,27 +106,27 @@ public class DoctorPrescriptionJPanel extends javax.swing.JPanel {
         setLayout(null);
 
         jTextField1.setEditable(false);
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jTextField1.setEnabled(false);
         add(jTextField1);
         jTextField1.setBounds(880, 170, 190, 40);
 
         jTextField2.setEditable(false);
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextField2.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jTextField2.setEnabled(false);
         add(jTextField2);
         jTextField2.setBounds(880, 230, 190, 40);
 
         jTextField3.setEditable(false);
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextField3.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jTextField3.setEnabled(false);
         add(jTextField3);
         jTextField3.setBounds(880, 290, 190, 40);
 
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jComboBox1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,7 +137,7 @@ public class DoctorPrescriptionJPanel extends javax.swing.JPanel {
         jComboBox1.setBounds(880, 340, 190, 40);
 
         testRequiredTxt.setEditable(false);
-        testRequiredTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        testRequiredTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         testRequiredTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         testRequiredTxt.setEnabled(false);
         testRequiredTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -149,6 +149,7 @@ public class DoctorPrescriptionJPanel extends javax.swing.JPanel {
         testRequiredTxt.setBounds(880, 390, 190, 40);
 
         messageTxt.setColumns(20);
+        messageTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         messageTxt.setRows(5);
         jScrollPane1.setViewportView(messageTxt);
 
@@ -156,7 +157,7 @@ public class DoctorPrescriptionJPanel extends javax.swing.JPanel {
         jScrollPane1.setBounds(880, 450, 250, 70);
 
         labBtn.setBackground(new java.awt.Color(0, 0, 0));
-        labBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        labBtn.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         labBtn.setForeground(new java.awt.Color(255, 255, 255));
         labBtn.setText("Send To Lab");
         labBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -169,7 +170,7 @@ public class DoctorPrescriptionJPanel extends javax.swing.JPanel {
         labBtn.setBounds(650, 590, 160, 50);
 
         btnPharmacy.setBackground(new java.awt.Color(0, 0, 0));
-        btnPharmacy.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnPharmacy.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         btnPharmacy.setForeground(new java.awt.Color(255, 255, 255));
         btnPharmacy.setText("Send To Billing");
         btnPharmacy.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -194,44 +195,43 @@ public class DoctorPrescriptionJPanel extends javax.swing.JPanel {
         add(jButton3);
         jButton3.setBounds(810, 710, 140, 50);
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Provide Prescription");
-        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(102, 102, 102))); // NOI18N
+        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
         add(jLabel8);
         jLabel8.setBounds(0, 0, 1750, 80);
 
-        enterpriseLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        enterpriseLabel3.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel3.setText("Prescription");
         add(enterpriseLabel3);
         enterpriseLabel3.setBounds(670, 460, 170, 30);
 
-        enterpriseLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        enterpriseLabel4.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel4.setText("Name");
         add(enterpriseLabel4);
         enterpriseLabel4.setBounds(670, 170, 170, 30);
 
-        enterpriseLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        enterpriseLabel5.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel5.setText("Age");
         add(enterpriseLabel5);
         enterpriseLabel5.setBounds(670, 230, 170, 30);
 
-        enterpriseLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        enterpriseLabel6.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel6.setText("Gender");
         add(enterpriseLabel6);
         enterpriseLabel6.setBounds(670, 290, 170, 30);
 
-        enterpriseLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        enterpriseLabel8.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel8.setText("Illness");
         add(enterpriseLabel8);
         enterpriseLabel8.setBounds(670, 340, 170, 30);
 
-        enterpriseLabel9.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        enterpriseLabel9.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel9.setText("Test Required");
         add(enterpriseLabel9);
         enterpriseLabel9.setBounds(670, 390, 170, 30);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\rachi\\Desktop\\Images Project\\prescribe.jpeg")); // NOI18N
         jLabel2.setText("jLabel2");
         add(jLabel2);
         jLabel2.setBounds(0, 0, 1750, 900);

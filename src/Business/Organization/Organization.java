@@ -2,6 +2,8 @@
 package Business.Organization;
 
 import Business.Employee.EmployeeDirectory;
+import Business.FoodClothing.ClothInventory;
+import Business.FoodClothing.FoodInventory;
 import Business.Role.Role;
 import Business.UserAccount.UserAccountDirectory;
 import Business.WorkQueue.WorkQueue;
@@ -20,9 +22,11 @@ public abstract class Organization {
     private UserAccountDirectory userAccountDirectory;
     private int organizationID;
     private static int counter=0;
+    private FoodInventory foodinventory;
+    private ClothInventory clothinventory;
     
     public enum Type{
-        Admin("Admin Organization"), Police("Police Organization"), NGO("NGO Organization"), Doctor("Doctor Organization"),Lab("Lab Organization"),Billing("Billing Organization"), Self("Self Organization"), Food("Food Organization"),Clothing("Clothing Organization");
+        Admin("Admin Organization"), Police("Police Organization"), NGO("NGO Organization"), Doctor("Doctor Organization"),Lab("Lab Organization"),Billing("Billing Organization"), Self("Self Organization"), Restaurant("Food Organization"),ClothingOutlet("Clothing Organization");
         private String value;
         private Type(String value) {
             this.value = value;
@@ -37,6 +41,8 @@ public abstract class Organization {
         workQueue = new WorkQueue();
         employeeDirectory = new EmployeeDirectory();
         userAccountDirectory = new UserAccountDirectory();
+        foodinventory = new FoodInventory();
+        clothinventory= new ClothInventory();
         organizationID = counter;
         ++counter;
     }
@@ -56,6 +62,16 @@ public abstract class Organization {
     public EmployeeDirectory getEmployeeDirectory() {
         return employeeDirectory;
     }
+
+    public FoodInventory getFoodinventory() {
+        return foodinventory;
+    }
+
+    public ClothInventory getClothinventory() {
+        return clothinventory;
+    }
+
+
     
     public String getName() {
         return name;

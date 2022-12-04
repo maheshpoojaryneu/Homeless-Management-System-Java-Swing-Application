@@ -65,7 +65,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        networkJTable.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        networkJTable.setFont(new java.awt.Font("Trebuchet MS", 2, 14)); // NOI18N
         networkJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
@@ -105,13 +105,13 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         add(jScrollPane1);
         jScrollPane1.setBounds(460, 190, 480, 110);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel1.setText("Name");
         add(jLabel1);
         jLabel1.setBounds(550, 370, 110, 30);
 
         submitJButton.setBackground(new java.awt.Color(0, 0, 0));
-        submitJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        submitJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         submitJButton.setForeground(new java.awt.Color(255, 255, 255));
         submitJButton.setText("Submit");
         submitJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -123,14 +123,14 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         add(submitJButton);
         submitJButton.setBounds(660, 460, 110, 40);
 
-        nameJTextField.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        nameJTextField.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         nameJTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         nameJTextField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         add(nameJTextField);
         nameJTextField.setBounds(660, 370, 160, 28);
 
         backJButton.setBackground(new java.awt.Color(0, 0, 0));
-        backJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        backJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         backJButton.setForeground(new java.awt.Color(255, 255, 255));
         backJButton.setText("<< Back");
         backJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
@@ -142,7 +142,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         add(backJButton);
         backJButton.setBounds(340, 730, 120, 40);
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Manage Network");
         add(jLabel12);

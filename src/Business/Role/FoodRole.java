@@ -6,6 +6,8 @@ package Business.Role;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
+import Business.FoodClothing.ClothInventory;
+import Business.FoodClothing.FoodInventory;
 import Business.Homeless.HomelessDirectory;
 import Business.Organization.FoodOrganization;
 import Business.Organization.Organization;
@@ -21,7 +23,7 @@ public class FoodRole extends Role{
 
 
      @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,HomelessDirectory homelessdirectory) {
-        return new FoodWorkAreaJPanel(userProcessContainer, account, (FoodOrganization)organization, enterprise, business);
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,HomelessDirectory homelessdirectory,FoodInventory foodinventory, ClothInventory clothinventory) {
+        return new FoodWorkAreaJPanel(userProcessContainer, account, enterprise, business,foodinventory);
     }
 }
