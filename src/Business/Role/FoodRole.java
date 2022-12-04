@@ -23,7 +23,7 @@ public class FoodRole extends Role{
 
 
      @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,HomelessDirectory homelessdirectory,FoodInventory foodinventory, ClothInventory clothinventory) {
-        return new FoodWorkAreaJPanel(userProcessContainer, account, enterprise, business,foodinventory);
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,HomelessDirectory homelessdirectory,FoodInventory foodinventory, ClothInventory clothinventory, String username) {
+        return new FoodWorkAreaJPanel(userProcessContainer, account, enterprise,organization, business,foodinventory, username);
     }
 }

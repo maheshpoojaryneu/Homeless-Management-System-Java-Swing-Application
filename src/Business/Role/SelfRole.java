@@ -23,7 +23,7 @@ public class SelfRole extends Role{
 
 
      @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,HomelessDirectory homelessdirectory, FoodInventory foodinventory, ClothInventory clothinventory ) {
-        return new SelfWorkAreaJPanel(userProcessContainer, account, (SelfOrganization)organization, enterprise, business, foodinventory, clothinventory);
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,HomelessDirectory homelessdirectory, FoodInventory foodinventory, ClothInventory clothinventory,String username ) {
+        return new SelfWorkAreaJPanel(userProcessContainer, account, (SelfOrganization)organization, enterprise, business, foodinventory, clothinventory, username);
     }
 }

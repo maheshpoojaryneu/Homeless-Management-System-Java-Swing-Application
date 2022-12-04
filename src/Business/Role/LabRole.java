@@ -18,7 +18,7 @@ import userinterface.LabArea.LabWorkAreaJPanel;
  */
 public class LabRole extends Role{
      @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,HomelessDirectory homelessdirectory,FoodInventory foodinventory, ClothInventory clothinventory) {
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,HomelessDirectory homelessdirectory,FoodInventory foodinventory, ClothInventory clothinventory,String username) {
         return new LabWorkAreaJPanel(userProcessContainer, account, (LabOrganization)organization, enterprise, business);
         
     }

@@ -50,7 +50,8 @@ public abstract class Role {
             EcoSystem business,
             HomelessDirectory homelessdirectory,
             FoodInventory foodinventory,
-            ClothInventory clothinventory);
+            ClothInventory clothinventory,
+    String username);
 
     @Override
     public String toString() {

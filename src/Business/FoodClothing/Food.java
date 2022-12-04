@@ -55,7 +55,11 @@ public class Food {
     public void setDonatedon(String donatedon) {
         this.donatedon = donatedon;
     }
-         
+    @Override
+    public String toString()
+    {
+        return shelter;
+    }
     
     
 }

@@ -19,7 +19,7 @@ import userinterface.PoliceRole.PoliceViewRecordJPanel;
 public class PoliceRole extends Role{
 
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,HomelessDirectory homelessdirectory,FoodInventory foodinventory, ClothInventory clothinventory) {
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,HomelessDirectory homelessdirectory,FoodInventory foodinventory, ClothInventory clothinventory,String username) {
         return new PoliceViewRecordJPanel(userProcessContainer, account, (PoliceOrganization)organization, enterprise,homelessdirectory);
     }
     

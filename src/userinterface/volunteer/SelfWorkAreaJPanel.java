@@ -42,9 +42,9 @@ public class SelfWorkAreaJPanel extends javax.swing.JPanel {
     private ClothingOrganization clothingorganization;
     private FoodInventory foodinventory; 
     private ClothInventory clothinventory;
-            
-            
-    public SelfWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, FoodInventory foodinventory, ClothInventory clothinventory) {
+    private String username;        
+    private Organization organization;
+    public SelfWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, FoodInventory foodinventory, ClothInventory clothinventory, String username) {
         initComponents();
         
         this.userProcessContainer = userProcessContainer;
@@ -55,6 +55,8 @@ public class SelfWorkAreaJPanel extends javax.swing.JPanel {
         this.homelessDirectory = new HomelessDirectory();
         this.clothinventory=new ClothInventory();
         this.foodinventory= new FoodInventory();
+        this.username=username;
+        this.organization=organization;
     }
 
     /**
@@ -120,7 +122,7 @@ public class SelfWorkAreaJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageNetworkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageNetworkActionPerformed
-        FoodWorkAreaJPanel foodWorkJPanel=new FoodWorkAreaJPanel(userProcessContainer, userAccount, enterprise, business, foodinventory);
+        FoodWorkAreaJPanel foodWorkJPanel=new FoodWorkAreaJPanel(userProcessContainer, userAccount, enterprise, organization,business, foodinventory,username);
         userProcessContainer.add("foodWorkJPanel",foodWorkJPanel);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);

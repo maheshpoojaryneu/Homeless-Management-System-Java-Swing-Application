@@ -259,7 +259,7 @@ public class MainJFrame extends javax.swing.JFrame {
         }
         else{
             CardLayout layout=(CardLayout)container.getLayout();
-            container.add("workArea",userAccount.getRole().createWorkArea(container, userAccount, inOrganization, inEnterprise, system,homelessdirectory, foodinventory, clothinventory));
+            container.add("workArea",userAccount.getRole().createWorkArea(container, userAccount, inOrganization, inEnterprise, system,homelessdirectory, foodinventory, clothinventory,userName));
             layout.next(container);
         }
         
@@ -280,6 +280,8 @@ public class MainJFrame extends javax.swing.JFrame {
 
         container.removeAll();
         JPanel blankJP = new JPanel();
+        
+       // MainJFrame mainframe = new MainJFrame();
         container.add("blank", blankJP);
         CardLayout crdLyt = (CardLayout) container.getLayout();
         crdLyt.next(container);
@@ -357,6 +359,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton logoutJButton;
     public static javax.swing.JPasswordField passwordField;
     private javax.swing.JButton signupJButton;
-    public static javax.swing.JTextField userNameJTextField;
+    public javax.swing.JTextField userNameJTextField;
     // End of variables declaration//GEN-END:variables
 }

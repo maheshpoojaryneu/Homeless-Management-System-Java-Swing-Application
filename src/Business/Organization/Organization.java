@@ -22,7 +22,7 @@ public abstract class Organization {
     private UserAccountDirectory userAccountDirectory;
     private int organizationID;
     private static int counter=0;
-    private FoodInventory foodinventory;
+    public FoodInventory foodinventory;
     private ClothInventory clothinventory;
     
     public enum Type{

@@ -22,7 +22,7 @@ public class ClothingRole extends Role{
 
 
      @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,HomelessDirectory homelessdirectory,FoodInventory foodinventory, ClothInventory clothinventory) {
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,HomelessDirectory homelessdirectory,FoodInventory foodinventory, ClothInventory clothinventory,String username) {
         return new ClothingWorkAreaJPanel(userProcessContainer, account, (ClothingOrganization)organization, enterprise, business,clothinventory);
     }
     

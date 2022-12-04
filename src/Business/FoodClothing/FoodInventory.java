@@ -11,17 +11,15 @@ import java.util.ArrayList;
  * @author mahes
  */
 public class FoodInventory {
- ArrayList<Food> foodinventory;   
+ private ArrayList<Food> foodinventory;   
 
+  public FoodInventory()
+ {
+     foodinventory=new ArrayList();
+ }
     public ArrayList<Food> getFoodinventory() {
         return foodinventory;
     }
-
-    public void setFoodinventory(ArrayList<Food> foodinventory) {
-        this.foodinventory = foodinventory;
-    }
-    
-
  public Food addToInventory(String shelter, String location,int quantity,String providedby,String donatedon)
  {
      Food food= new Food();
@@ -44,8 +42,5 @@ public class FoodInventory {
      foodinventory.set(index,food);
      return food;
  }
- public FoodInventory()
- {
-     foodinventory=new ArrayList();
- }
+
 }

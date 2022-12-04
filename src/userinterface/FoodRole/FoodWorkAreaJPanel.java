@@ -8,11 +8,12 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.FoodClothing.Food;
 import Business.FoodClothing.FoodInventory;
+import Business.Organization.Organization;
 //import Business.Homeless.Homeless;
 //import Business.Homeless.HomelessDirectory;
 //import Business.Network.Network;
 //import Business.Organization.FoodOrganization;
-import Business.Organization.Organization;
+//import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -22,7 +23,6 @@ import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import userinterface.MainJFrame;
-import static userinterface.MainJFrame.passwordField;
 
 /**
  *
@@ -41,31 +41,23 @@ public class FoodWorkAreaJPanel extends javax.swing.JPanel {
     //private Homeless homeless;
     private EcoSystem business;
     //private Network network;
-    //private FoodInventory foodinventory;
-    
-    public FoodWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, EcoSystem business, FoodInventory foodinventory) {
+    private FoodInventory foodinventory;
+    private String username;
+    private Organization org;
+    public FoodWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise,Organization organization, EcoSystem business, FoodInventory foodinventory, String username) {
         initComponents();
         //this.userProcessContainer = userProcessContainer;
         //this.userAccount = account;
         ///this.foodOrganization = (FoodOrganization)organization;
         this.enterprise = enterprise;
         this.business = business;
+        this.username=username;
         //this.homelessDirectory = new HomelessDirectory();
-      //  this.foodinventory= foodinventory;
-    /*  try{
-        if(foodOrganization.getFoodinventory().getFoodinventory()!= null)
-        {
-            populateTbl();
-        }
-      }
-      catch (NullPointerException e)
-      {
-          JOptionPane.showMessageDialog(null,e);
-      }
-      */
-      pop();
+      this.foodinventory= foodinventory;
+     // this.org=organization;
+      
+     // populateTbl();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -88,7 +80,6 @@ public class FoodWorkAreaJPanel extends javax.swing.JPanel {
         date = new com.toedter.calendar.JDateChooser();
         jButton2 = new javax.swing.JButton();
         backJButton = new javax.swing.JButton();
-        jComboBox2 = new javax.swing.JComboBox();
 
         foodTbl.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         foodTbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -156,8 +147,6 @@ public class FoodWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Food Organization" }));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -194,10 +183,6 @@ public class FoodWorkAreaJPanel extends javax.swing.JPanel {
                                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(726, 726, 726)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,9 +206,7 @@ public class FoodWorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addGap(18, 18, 18)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addGap(80, 80, 80)
                 .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(106, Short.MAX_VALUE))
         );
@@ -253,12 +236,52 @@ public class FoodWorkAreaJPanel extends javax.swing.JPanel {
         SimpleDateFormat dformat = new SimpleDateFormat("yyyy-MM-dd");
         String donatedOn = dformat.format(date.getDate());
         
-        MainJFrame mainframe = new MainJFrame();
-       String userName = mainframe.userNameJTextField.getText();
+      //  MainJFrame mainframe = new MainJFrame();
+      //  String userName = mainframe.userNameJTextField.getText();
      
-       Organization organization = (Organization) jComboBox2.getSelectedItem();
-       organization.getFoodinventory().addToInventory(shelter,location,quantity, userName, donatedOn);
-       JOptionPane.showMessageDialog(null, "Added");
+     // String o="Food Organization";
+    //   for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList())
+      // {
+           
+        //       if(organization.getName().contains("Food Organization"))
+          //    {
+           
+                   
+              //     organization.getFoodinventory().addToInventory(shelter,location,quantity, username, donatedOn);
+            //       JOptionPane.showMessageDialog(null, "Added");
+                 //  populateTbl();
+       //       }
+       //}
+      
+       for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList())
+       {
+           
+               if(organization.getName().contains("Food Organization"))
+            {
+           try{
+               JOptionPane.showMessageDialog(null, enterprise);
+                  enterprise.getFoodinventory().addToInventory(shelter, location, quantity, username, donatedOn);
+                      // organization.getFoodinventory().addToInventory(shelter, location, quantity, username, donatedOn);
+                       JOptionPane.showMessageDialog(null, "Added");
+                   
+              //     organization.getFoodinventory().addToInventory(shelter,location,quantity, username, donatedOn);
+            //       JOptionPane.showMessageDialog(null, "Added");
+                 //  populateTbl();
+       //       }
+       //}
+      
+           }
+           catch(NullPointerException e)
+           {
+               JOptionPane.showMessageDialog(null, e);
+           }
+            }
+       }
+    // org.getFoodinventory().addToInventory(shelter,location,quantity, username, donatedOn);
+      // JOptionPane.showMessageDialog(null, "Added");
+     //  JOptionPane.showMessageDialog(null, org);
+      // populateTbl();
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -314,7 +337,6 @@ public class FoodWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -326,23 +348,29 @@ public class FoodWorkAreaJPanel extends javax.swing.JPanel {
 
     private void populateTbl() {
         
-       MainJFrame mainframe = new MainJFrame();
-       String userName = mainframe.userNameJTextField.getText();
-       char[] passwordCharArray = passwordField.getPassword();
-        String password = String.valueOf(passwordCharArray);
+      // MainJFrame mainframe = new MainJFrame();
+       //String userName = mainframe.userNameJTextField.getText();
        
-       UserAccount userAccount=business.getUserAccountDirectory().authenticateUser(userName, password);
+       
+       
+     //   UserAccount useraccount= new UserAccount();
         
         DefaultTableModel model = (DefaultTableModel) foodTbl.getModel();
         model.setRowCount(0);
         //Food food=new Food();
+        //for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
         
-      /*  for (Food food : foodOrganization.getFoodinventory().getFoodinventory())
+        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList())
+       {
+           
+               if(organization.getName().contains("Food Organization"))
+              {
+                   for (Food food : organization.getFoodinventory().getFoodinventory())
         {
-            if(food.getProvidedby().equals(userAccount.getUsername()))
+            if(food.getProvidedby().equals(username))
             {
             Object[] row = new Object[4];
-            row[0]=food.getShelter();
+            row[0]=food;
             row[1]=food.getLocation();
             row[1]=food.getDonatedon();
             row[1]=food.getQuantity();
@@ -350,21 +378,13 @@ public class FoodWorkAreaJPanel extends javax.swing.JPanel {
             model.addRow(row);
             
             }
-        }
+        //}
        
-       */
+       
     }
-    
-    
-
-    private void pop() {
-     jComboBox2.removeAllItems();
-
-        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) 
-        {
-            jComboBox2.addItem(organization);
-    
+              }
+       
     
     }
-}
-}
+
+}}
