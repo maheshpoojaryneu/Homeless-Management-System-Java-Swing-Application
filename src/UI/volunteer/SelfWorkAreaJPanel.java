@@ -4,22 +4,6 @@
  */
 package UI.volunteer;
 
-import HMS.NetworkDirectory;
-import HMS.Enterprise.Enterprise;
-import HMS.FoodClothing.ClothInventory;
-import HMS.FoodClothing.FoodInventory;
-import HMS.Homeless.Homeless;
-import HMS.Homeless.HomelessDirectory;
-import HMS.Network.Network;
-import HMS.Organization.ClothingOrganization;
-import HMS.Organization.FoodOrganization;
-import HMS.Organization.Organization;
-import HMS.Organization.SelfOrganization;
-import HMS.UserAccount.UserAccount;
-import java.awt.CardLayout;
-import javax.swing.JPanel;
-import UI.ClothingRole.ClothingWorkAreaJPanel;
-import UI.FoodRole.FoodWorkAreaJPanel;
 
 /**
  *
