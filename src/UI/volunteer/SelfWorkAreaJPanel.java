@@ -71,6 +71,8 @@ public class SelfWorkAreaJPanel extends javax.swing.JPanel {
         btnManageNetwork = new javax.swing.JButton();
         btnManageEnterprise = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
         btnManageNetwork.setBackground(new java.awt.Color(0, 0, 0));
         btnManageNetwork.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         btnManageNetwork.setForeground(new java.awt.Color(255, 255, 255));

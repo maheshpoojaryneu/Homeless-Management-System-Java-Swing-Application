@@ -159,6 +159,7 @@ public class SendLabResultJPanel extends javax.swing.JPanel {
         add(jLabel5);
         jLabel5.setBounds(610, 300, 121, 29);
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/lab-removebg-preview.png"))); // NOI18N
         add(jLabel2);

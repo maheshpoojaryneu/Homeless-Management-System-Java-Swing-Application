@@ -174,7 +174,7 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         jLabel8.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Lab Work Area");
-        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
+        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 0, 13), new java.awt.Color(102, 102, 102))); // NOI18N
         add(jLabel8);
         jLabel8.setBounds(0, 0, 1750, 80);
 
@@ -191,7 +191,7 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         add(refreshJButton);
         refreshJButton.setBounds(30, 100, 130, 40);
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         add(jLabel2);
         jLabel2.setBounds(0, 0, 1750, 900);
     }// </editor-fold>//GEN-END:initComponents

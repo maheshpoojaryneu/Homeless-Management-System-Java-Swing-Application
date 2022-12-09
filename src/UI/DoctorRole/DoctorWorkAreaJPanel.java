@@ -150,7 +150,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(processJButton);
-        processJButton.setBounds(120, 330, 160, 40);
+        processJButton.setBounds(290, 280, 160, 40);
 
         workRequestJTable.setFont(new java.awt.Font("Trebuchet MS", 3, 14)); // NOI18N
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
