@@ -137,7 +137,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(assignJButton);
-        assignJButton.setBounds(370, 300, 160, 40);
+        assignJButton.setBounds(120, 280, 160, 40);
 
         processJButton.setBackground(new java.awt.Color(0, 0, 0));
         processJButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -150,7 +150,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(processJButton);
-        processJButton.setBounds(1230, 300, 160, 40);
+        processJButton.setBounds(120, 330, 160, 40);
 
         workRequestJTable.setFont(new java.awt.Font("Trebuchet MS", 3, 14)); // NOI18N
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -188,18 +188,16 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(workRequestJTable);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(370, 160, 1030, 100);
+        jScrollPane1.setBounds(110, 160, 1030, 100);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Doctor Work Area");
-        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
+        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 0, 13), new java.awt.Color(102, 102, 102))); // NOI18N
         add(jLabel8);
-        jLabel8.setBounds(0, 0, 1750, 80);
-
-        jLabel2.setText("jLabel2");
+        jLabel8.setBounds(0, 0, 1420, 80);
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 1750, 900);
+        jLabel2.setBounds(200, -20, 1750, 900);
     }// </editor-fold>//GEN-END:initComponents
 
     private void refreshJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshJButtonActionPerformed

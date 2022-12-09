@@ -145,7 +145,7 @@ public class SendLabResultJPanel extends javax.swing.JPanel {
         jLabel8.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Lab Request ");
-        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
+        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 0, 13), new java.awt.Color(102, 102, 102))); // NOI18N
         add(jLabel8);
         jLabel8.setBounds(0, 0, 1750, 80);
 
@@ -160,7 +160,7 @@ public class SendLabResultJPanel extends javax.swing.JPanel {
         jLabel5.setBounds(610, 300, 121, 29);
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
-        jLabel2.setText("jLabel2");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/lab-removebg-preview.png"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(0, 0, 1840, 890);
     }// </editor-fold>//GEN-END:initComponents

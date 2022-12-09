@@ -155,7 +155,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         }
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(1080, 70, 320, 110);
+        jScrollPane1.setBounds(430, 200, 370, 130);
 
         employeeJComboBox.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         employeeJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
