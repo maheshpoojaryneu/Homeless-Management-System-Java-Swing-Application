@@ -222,11 +222,12 @@ public class NGOFoodClothingRequestJPanel extends javax.swing.JPanel {
             
         {
             Object[] row = new Object[5];
-            row[0]=food;
+            row[0]=food.getShelter();
             row[1]=food.getLocation();
             row[2]=food.getQuantity();
             row[3]=food.getProvidedby();
             row[4]=food.getDonatedon();
+           
            
             
             model.addRow(row);
@@ -244,7 +245,7 @@ public class NGOFoodClothingRequestJPanel extends javax.swing.JPanel {
             
         {
             Object[] row = new Object[5];
-            row[0]=cloth;
+            row[0]=cloth.getShelter();
             row[1]=cloth.getLocation();
             row[2]=cloth.getQuantity();
             row[3]=cloth.getProvidedby();

@@ -3,6 +3,8 @@ package UI.NGOSupervisorRole;
 
 import HMS.NetworkDirectory;
 import HMS.Enterprise.Enterprise;
+import HMS.FoodClothing.ClothInventory;
+import HMS.FoodClothing.FoodInventory;
 import HMS.Network.Network;
 import HMS.Organization.NGOOrganization;
 import HMS.Organization.Organization;
@@ -33,11 +35,12 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
     private Enterprise enterprise;
     private Network network;
     private NGOWorkRequest request;
-    
+    private FoodInventory foodinventory;
+    private ClothInventory clothinventory;
     /**
      * Creates new form LabAssistantWorkAreaJPanel
      */
-    public NGOSupervisorWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization ngoOrganization, NetworkDirectory business, Enterprise enterprise) {
+    public NGOSupervisorWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization ngoOrganization, NetworkDirectory business, Enterprise enterprise, FoodInventory foodinventory, ClothInventory clothinventory) {
         
         initComponents();
         this.userProcessContainer = userProcessContainer;
@@ -45,6 +48,8 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         this.business = business;
         this.ngoOrganization = (NGOOrganization)ngoOrganization;
         this.enterprise = enterprise;
+        this.foodinventory= foodinventory;
+        this.clothinventory=clothinventory;
         
         populateTable();
         hiddenitems();
@@ -257,27 +262,22 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         add(daysTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 490, 120, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Number Of Days");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 490, -1, -1));
 
         breakfastChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        breakfastChk.setForeground(new java.awt.Color(255, 255, 255));
         breakfastChk.setText("Breakfast");
         add(breakfastChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 560, -1, -1));
 
         lunchChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lunchChk.setForeground(new java.awt.Color(255, 255, 255));
         lunchChk.setText("Lunch");
         add(lunchChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 600, -1, -1));
 
         snacksChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        snacksChk.setForeground(new java.awt.Color(255, 255, 255));
         snacksChk.setText("Snacks");
         add(snacksChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 640, -1, -1));
 
         dinnerChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        dinnerChk.setForeground(new java.awt.Color(255, 255, 255));
         dinnerChk.setText("Dinner");
         add(dinnerChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 680, -1, -1));
 
@@ -309,28 +309,28 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(calculateCostBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 650, 190, 30));
 
+        jacketChk.setBackground(new java.awt.Color(255, 255, 255));
         jacketChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jacketChk.setForeground(new java.awt.Color(255, 255, 255));
         jacketChk.setText("Jacket");
         add(jacketChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 550, -1, -1));
 
+        topWearChk.setBackground(new java.awt.Color(255, 255, 255));
         topWearChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        topWearChk.setForeground(new java.awt.Color(255, 255, 255));
         topWearChk.setText("Top Wear");
         add(topWearChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 600, -1, -1));
 
+        bottomWearChk.setBackground(new java.awt.Color(255, 255, 255));
         bottomWearChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        bottomWearChk.setForeground(new java.awt.Color(255, 255, 255));
         bottomWearChk.setText("Bottom Wear");
         add(bottomWearChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 650, -1, -1));
 
+        thermalChk.setBackground(new java.awt.Color(255, 255, 255));
         thermalChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        thermalChk.setForeground(new java.awt.Color(255, 255, 255));
         thermalChk.setText("Thermals");
         add(thermalChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 700, -1, -1));
 
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Number Of Days");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 490, -1, -1));
 
@@ -371,6 +371,7 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1750, 70));
 
+        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("jLabel5");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1750, 830));
     }// </editor-fold>//GEN-END:initComponents
@@ -593,6 +594,7 @@ int i =0;
            count = count+1;
        }
         total = count * days * 10;
+        
         costTxt.setText(String.valueOf(total));
          JOptionPane.showMessageDialog(null, "Food Cost Calculated Successfully");
         

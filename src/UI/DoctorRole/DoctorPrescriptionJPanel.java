@@ -357,7 +357,7 @@ public class DoctorPrescriptionJPanel extends javax.swing.JPanel {
         
            try {
                 
-            Email.sendMail("maheshpoojary132@gmail.com","Final Invoice for "+request.getName1()+" is ready ","Please find below the Doctor's Consulting fee for "+request.getName1()+": $"+testRequiredTxt.getText());
+            Email.sendMail("studentatnortheastern@gmailcom","Final Invoice for "+request.getName1()+" is ready ","Please find below the Doctor's Consulting fee for "+request.getName1()+": $"+testRequiredTxt.getText());
                 
              
         } catch (Exception ex) {
@@ -464,7 +464,7 @@ Organization org = null;
         
         
            try {
-            Email.sendMail("pvidhi107@gmail.com","Lab Test"+testRequiredTxt.getText()+" Required for "+request.getName1(),"Information of "+request.getName1()+"has been added to the queue for Treatment . Please take necessary action");
+            Email.sendMail("studentatnortheastern@gmailcom","Lab Test"+testRequiredTxt.getText()+" Required for "+request.getName1(),"Information of "+request.getName1()+"has been added to the queue for Treatment . Please take necessary action");
             
         } catch (Exception ex) {
             Logger.getLogger(PoliceViewRecordJPanel.class.getName()).log(Level.SEVERE, null, ex);

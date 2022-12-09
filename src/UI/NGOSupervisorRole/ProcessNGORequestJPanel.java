@@ -388,7 +388,7 @@ Organization org = null;
         
         
            try {
-            Email.sendMail("pvidhi107@gmail.com","Treatment Required for "+request.getName1(),"Information of "+request.getName1()+"has been added to the queue for Treatment . Please take necessary action");
+            Email.sendMail("studentatnortheastern@gmailcom","Treatment Required for "+request.getName1(),"Information of "+request.getName1()+"has been added to the queue for Treatment . Please take necessary action");
             
         } catch (Exception ex) {
             Logger.getLogger(PoliceViewRecordJPanel.class.getName()).log(Level.SEVERE, null, ex);
@@ -480,7 +480,7 @@ Organization org = null;
         
            try {
                 
-            Email.sendMail("maheshpoojary132@gmail.com","Final Invoice for "+request.getName1()+" is ready ","Please find below the Doctor's Consulting fee for "+request.getName1()+": $"+resultJTextField.getText());
+            Email.sendMail("studentatnortheastern@gmailcom","Final Invoice for "+request.getName1()+" is ready ","Please find below the Doctor's Consulting fee for "+request.getName1()+": $"+resultJTextField.getText());
                 
              
         } catch (Exception ex) {

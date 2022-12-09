@@ -542,7 +542,7 @@ int i=0;
         request.setClaimed("Yes");
         
            try {
-            Email.sendMail("maheshpoojary132@gmail.com","Final Bill for  "+request.getName1()
+            Email.sendMail("studentatnortheastern@gmailcom","Final Bill for  "+request.getName1()
                     +"has been generated"," Please settle the final amount for the follwing  "
                     +"\n"+"lab bill : "+labTxt.getText()
                     +"\n"+"doctor bill : "+doctorTxt.getText()

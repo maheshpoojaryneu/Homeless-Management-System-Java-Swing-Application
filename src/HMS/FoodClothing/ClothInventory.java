@@ -13,7 +13,8 @@ import java.util.ArrayList;
 public class ClothInventory {
     
     private ArrayList<Cloth> clothinventory;   
-
+    private int total;
+   
    public ClothInventory()
    {
        clothinventory=new ArrayList();
@@ -42,6 +43,15 @@ public class ClothInventory {
  {
      clothinventory.set(index,cloth);
      return cloth;
+ }
+ 
+ public int clothtotal()
+ {
+     for(Cloth c : getClothinventory())
+     {
+         total = total +c.getQuantity();
+     }
+     return total;
  }
     
 }

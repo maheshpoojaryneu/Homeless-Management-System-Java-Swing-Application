@@ -95,7 +95,6 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
         criminalTxt = new javax.swing.JTextField();
         addHomelessBtn = new javax.swing.JButton();
         ageTxt = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
         genderTxt = new javax.swing.JTextField();
         locationTxt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -243,13 +242,6 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
         });
         add(ageTxt);
         ageTxt.setBounds(690, 530, 210, 40);
-
-        jLabel11.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Request to NGO");
-        jLabel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
-        add(jLabel11);
-        jLabel11.setBounds(-20, 140, 1750, 370);
 
         genderTxt.setEditable(false);
         genderTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
@@ -417,20 +409,43 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
         for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()){
             if (organization instanceof NGOOrganization){
                 org = organization;
+                JOptionPane.showMessageDialog(null, org);
                 break;
             }
+            
+        }
+        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()){
+           // if (organization instanceof NGOOrganization){
+                JOptionPane.showMessageDialog(null, enterprise);
+                
+           org = organization;
+                JOptionPane.showMessageDialog(null, org);
+              //  break;
+            //}
+        }
+        if(org == null);
+        {
+         JOptionPane.showMessageDialog(null, "Request Not Added");
+            
         }
         if (org!=null){
             org.getWorkQueue().getWorkRequestList().add(request);
             userAccount.getWorkQueue().getWorkRequestList().add(request);
+         JOptionPane.showMessageDialog(null, "Request Added");
+            
         }
-               try {
-            Email.sendMail("maheshpoojary132@gmail.com","New Person's Request Has Been Sent","Information of "+request.getName1()+"has been added to the queue. Please take necessary action");
+        
+        
+        
+        
+        try {
+            Email.sendMail("studentatnortheastern@gmailcom","New Person's Request Has Been Sent","Information of "+request.getName1()+"has been added to the queue. Please take necessary action");
             
         } catch (Exception ex) {
-            Logger.getLogger(PoliceViewRecordJPanel.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, ex);
         }
-               
+        
+        
                
                int selectedRow1 = homelessTbl.getSelectedRow();
                Homeless homeless = (Homeless) homelessTbl.getValueAt(selectedRow1, 0);
@@ -439,7 +454,7 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
                
                
                      
-Logger logger = Logger.getLogger("MyLog");  
+/*Logger logger = Logger.getLogger("MyLog");  
       FileHandler fh;  
 
     try {  
@@ -459,7 +474,7 @@ Logger logger = Logger.getLogger("MyLog");
         e.printStackTrace();  
     } 
        
-        
+*/        
        } 
        
        
@@ -505,7 +520,6 @@ Logger logger = Logger.getLogger("MyLog");
     private javax.swing.JTable homelessTbl;
     private javax.swing.JTextField idTxt;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;

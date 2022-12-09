@@ -4,7 +4,7 @@
  */
 package HMS.FoodClothing;
 
-import HMS.Homeless.Shelter;
+
 import java.util.ArrayList;
 
 /**
@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class FoodInventory {
  private ArrayList<Food> foodinventory;   
-
+private int total=0;
   public FoodInventory()
  {
      foodinventory=new ArrayList();
@@ -43,5 +43,12 @@ public class FoodInventory {
      foodinventory.set(index,food);
      return food;
  }
-
+  public int foodtotal()
+ {
+     for(Food f : getFoodinventory())
+     {
+         total = total + f.getQuantity();
+     }
+     return total;
+ }
 }

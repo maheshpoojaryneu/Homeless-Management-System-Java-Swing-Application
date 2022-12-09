@@ -34,8 +34,8 @@ public class NGOEmail {
    properties.put("mail.smtp.host","smtp.gmail.com");
    properties.put("mail.smtp.port","587");
    
-   final String myAccountEmail ="maheshpoojary132@gmail.com";
-   final String password="mah132esh56";
+   final String myAccountEmail ="studentatnortheastern@gmailcom";
+   final String password="dcuyvciqrrzfavzo";
     String S;
    
    Session session =Session.getInstance(properties, new Authenticator(){

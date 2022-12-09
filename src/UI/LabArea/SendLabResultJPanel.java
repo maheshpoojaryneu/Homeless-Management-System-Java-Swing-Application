@@ -244,7 +244,7 @@ Organization org = null;
         
            try {
                 
-            Email.sendMail("maheshpoojary132@gmail.com","Final Invoice for "+request.getName1()+" is ready ","Please find below the cost of "+request.getTesttype()+" for "+request.getName1()+": $");
+            Email.sendMail("studentatnortheastern@gmailcom","Final Invoice for "+request.getName1()+" is ready ","Please find below the cost of "+request.getTesttype()+" for "+request.getName1()+": $");
                 
              
         } catch (Exception ex) {
