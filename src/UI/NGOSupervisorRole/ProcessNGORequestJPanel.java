@@ -127,7 +127,7 @@ public class ProcessNGORequestJPanel extends javax.swing.JPanel {
             }
         });
         add(backJButton);
-        backJButton.setBounds(220, 120, 90, 40);
+        backJButton.setBounds(220, 170, 90, 40);
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel2.setText("Name");
@@ -251,7 +251,7 @@ public class ProcessNGORequestJPanel extends javax.swing.JPanel {
         jLabel11.setText("NGO Work Area");
         jLabel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 0, 13), new java.awt.Color(102, 102, 102))); // NOI18N
         add(jLabel11);
-        jLabel11.setBounds(-320, 0, 1750, 80);
+        jLabel11.setBounds(-320, 80, 1750, 80);
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/ngo1.jpeg"))); // NOI18N
@@ -259,14 +259,14 @@ public class ProcessNGORequestJPanel extends javax.swing.JPanel {
         jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel13.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         add(jLabel13);
-        jLabel13.setBounds(0, 80, 980, 860);
+        jLabel13.setBounds(-20, 220, 970, 720);
 
         jLabel12.setBackground(new java.awt.Color(255, 255, 255));
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("jLabel3");
         jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 6));
         add(jLabel12);
-        jLabel12.setBounds(190, 80, 770, 860);
+        jLabel12.setBounds(190, 70, 770, 870);
     }// </editor-fold>//GEN-END:initComponents
 
     

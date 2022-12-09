@@ -194,7 +194,7 @@ public class BillingWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(workRequestJTable);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(190, 140, 1340, 96);
+        jScrollPane1.setBounds(250, 110, 1280, 96);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("Current Location");
@@ -307,7 +307,7 @@ public class BillingWorkAreaJPanel extends javax.swing.JPanel {
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Billing Work Area");
-        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
+        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 0, 13), new java.awt.Color(102, 102, 102))); // NOI18N
         add(jLabel8);
         jLabel8.setBounds(0, 0, 1750, 80);
 
@@ -332,6 +332,8 @@ public class BillingWorkAreaJPanel extends javax.swing.JPanel {
         jLabel9.setText("Homeless Person Repository");
         add(jLabel9);
         jLabel9.setBounds(870, 290, 360, 40);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/bills-removebg-preview.png"))); // NOI18N
         add(jLabel11);
         jLabel11.setBounds(0, 0, 1790, 900);
     }// </editor-fold>//GEN-END:initComponents
