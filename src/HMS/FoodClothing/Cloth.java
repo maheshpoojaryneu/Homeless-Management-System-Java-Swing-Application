@@ -18,7 +18,7 @@ public class Cloth {
  private String providedby;
  private String donatedon;
 private WorkQueue workqueue;
-
+private int SavedCost;
 public Cloth()
 {
     workqueue=new WorkQueue();
@@ -61,6 +61,14 @@ public Cloth()
 
     public void setDonatedon(String donatedon) {
         this.donatedon = donatedon;
+    }
+
+    public int getSavedCost() {
+        return SavedCost;
+    }
+
+    public void setSavedCost(int SavedCost) {
+        this.SavedCost = SavedCost;
     }
 
     

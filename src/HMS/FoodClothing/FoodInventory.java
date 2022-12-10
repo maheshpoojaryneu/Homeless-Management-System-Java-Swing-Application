@@ -13,10 +13,12 @@ import java.util.ArrayList;
  */
 public class FoodInventory {
  private ArrayList<Food> foodinventory;   
+ private ArrayList<Food> TotalCost;
 private int total=0;
   public FoodInventory()
  {
      foodinventory=new ArrayList();
+     TotalCost=new ArrayList();
  }
     public ArrayList<Food> getFoodinventory() {
         return foodinventory;
@@ -51,4 +53,18 @@ private int total=0;
      }
      return total;
  }
+  public Food addTotalCost(int fooddonatedcost)
+          {
+              Food food = new Food();
+              food.setTotalCost(fooddonatedcost);
+              TotalCost.add(food);
+              return food;
+          }
+         
+  public ArrayList<Food> getTotalCost()
+  {
+      return TotalCost;
+  }
+  
+  
 }

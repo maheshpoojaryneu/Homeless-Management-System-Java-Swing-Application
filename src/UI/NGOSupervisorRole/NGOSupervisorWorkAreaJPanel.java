@@ -3,7 +3,9 @@ package UI.NGOSupervisorRole;
 
 import HMS.NetworkDirectory;
 import HMS.Enterprise.Enterprise;
+import HMS.FoodClothing.Cloth;
 import HMS.FoodClothing.ClothInventory;
+import HMS.FoodClothing.Food;
 import HMS.FoodClothing.FoodInventory;
 import HMS.Network.Network;
 import HMS.Organization.NGOOrganization;
@@ -570,7 +572,7 @@ int i =0;
        
        
        int total=0;
-       
+       int fooddonatedcost=0;
        if(daysTxt.getText() == null || daysTxt.getText().equals("")){
            JOptionPane.showMessageDialog(null, "Enter Number of Days");
        }
@@ -595,9 +597,24 @@ int i =0;
        }
         total = count * days * 10;
         
-        costTxt.setText(String.valueOf(total));
-         JOptionPane.showMessageDialog(null, "Food Cost Calculated Successfully");
         
+        if(foodinventory.foodtotal()>0)
+        {
+        fooddonatedcost=foodinventory.foodtotal() * 10;
+        int saved = total - fooddonatedcost;
+        
+        Food food= new Food();
+        food.setTotalCost(saved);
+        
+        costTxt.setText(String.valueOf(saved));
+         JOptionPane.showMessageDialog(null, "Food Cost Calculated Successfully");
+        }
+        else
+        {
+             costTxt.setText(String.valueOf(total));
+         JOptionPane.showMessageDialog(null, "Food Cost Calculated Successfully");
+       
+        }
        }
        
       
@@ -748,10 +765,25 @@ int i =0;
        }
         total1 = count1 * days1 * 10;
         
-        costTxt1.setText(String.valueOf(total1));
+        if(clothinventory.clothtotal()>0)
+        {
+        int clothdonatedcost=clothinventory.clothtotal() * 10;
+        int saved = total1 - clothdonatedcost;
+        
+       clothinventory.addTotalCost(saved);
+       
+        
+        costTxt1.setText(String.valueOf(saved));
         
          JOptionPane.showMessageDialog(null, "Cloth Cost Calculated Successfully");
-          
+        }
+        else
+        {
+            costTxt1.setText(String.valueOf(total1));
+        
+         JOptionPane.showMessageDialog(null, "Cloth Cost Calculated Successfully");
+      
+        }
        }
       
 // TODO add your handling code here:

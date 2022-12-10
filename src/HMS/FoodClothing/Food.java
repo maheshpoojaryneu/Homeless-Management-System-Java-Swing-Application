@@ -19,7 +19,7 @@ public class Food {
  private String providedby;
  private String donatedon;
  private WorkQueue workQueue;
-
+private int TotalCost;
  public Food()
  {
      workQueue = new WorkQueue();
@@ -63,6 +63,14 @@ public class Food {
 
     public void setDonatedon(String donatedon) {
         this.donatedon = donatedon;
+    }
+
+    public int getTotalCost() {
+        return TotalCost;
+    }
+
+    public void setTotalCost(int TotalCost) {
+        this.TotalCost = TotalCost;
     }
 
     

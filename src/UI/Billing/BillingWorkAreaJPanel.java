@@ -33,6 +33,7 @@ import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import HMS.Homeless.Shelter;
 import HMS.Homeless.ShelterDirectory;
+import UI.volunteer.Maps;
 import java.util.logging.FileHandler;
 import java.util.logging.SimpleFormatter;
 
@@ -157,6 +158,7 @@ public class BillingWorkAreaJPanel extends javax.swing.JPanel {
         shelterTbl = new javax.swing.JTable();
         jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jlocation = new javax.swing.JButton();
 
         setLayout(null);
 
@@ -199,24 +201,24 @@ public class BillingWorkAreaJPanel extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("Current Location");
         add(jLabel6);
-        jLabel6.setBounds(350, 500, 190, 30);
+        jLabel6.setBounds(250, 500, 190, 30);
 
         txtCurrentLocation.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         txtCurrentLocation.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         txtCurrentLocation.setEnabled(false);
         add(txtCurrentLocation);
-        txtCurrentLocation.setBounds(560, 500, 180, 28);
+        txtCurrentLocation.setBounds(460, 500, 180, 28);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setText("Shelter Location");
         add(jLabel5);
-        jLabel5.setBounds(350, 540, 190, 30);
+        jLabel5.setBounds(250, 540, 190, 30);
 
         txtShelterLocation.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         txtShelterLocation.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         txtShelterLocation.setEnabled(false);
         add(txtShelterLocation);
-        txtShelterLocation.setBounds(560, 540, 180, 28);
+        txtShelterLocation.setBounds(460, 540, 180, 28);
 
         assignShelter.setBackground(new java.awt.Color(0, 0, 0));
         assignShelter.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -229,7 +231,7 @@ public class BillingWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(assignShelter);
-        assignShelter.setBounds(430, 600, 200, 33);
+        assignShelter.setBounds(330, 600, 200, 33);
 
         btnGovernment.setBackground(new java.awt.Color(0, 0, 0));
         btnGovernment.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -247,62 +249,62 @@ public class BillingWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Lab Test Price");
         add(jLabel1);
-        jLabel1.setBounds(350, 300, 160, 27);
+        jLabel1.setBounds(250, 300, 160, 27);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Doctor Test Price");
         add(jLabel2);
-        jLabel2.setBounds(350, 340, 180, 27);
+        jLabel2.setBounds(250, 340, 180, 27);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Cloth Provided Bill");
         add(jLabel3);
-        jLabel3.setBounds(350, 380, 180, 27);
+        jLabel3.setBounds(250, 380, 180, 27);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Food Provided Bill");
         add(jLabel4);
-        jLabel4.setBounds(350, 420, 180, 27);
+        jLabel4.setBounds(250, 420, 180, 27);
 
         labTxt.setEditable(false);
         labTxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         labTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         labTxt.setEnabled(false);
         add(labTxt);
-        labTxt.setBounds(560, 300, 180, 28);
+        labTxt.setBounds(460, 300, 180, 28);
 
         doctorTxt.setEditable(false);
         doctorTxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         doctorTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         doctorTxt.setEnabled(false);
         add(doctorTxt);
-        doctorTxt.setBounds(560, 340, 180, 28);
+        doctorTxt.setBounds(460, 340, 180, 28);
 
         foodTxt.setEditable(false);
         foodTxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         foodTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         foodTxt.setEnabled(false);
         add(foodTxt);
-        foodTxt.setBounds(560, 420, 180, 28);
+        foodTxt.setBounds(460, 420, 180, 28);
 
         clothTxt.setEditable(false);
         clothTxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         clothTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         clothTxt.setEnabled(false);
         add(clothTxt);
-        clothTxt.setBounds(560, 380, 180, 28);
+        clothTxt.setBounds(460, 380, 180, 28);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel7.setText("Total Cost");
         add(jLabel7);
-        jLabel7.setBounds(350, 470, 130, 22);
+        jLabel7.setBounds(250, 470, 130, 22);
 
         costTxt.setEditable(false);
         costTxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         costTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         costTxt.setEnabled(false);
         add(costTxt);
-        costTxt.setBounds(560, 460, 180, 28);
+        costTxt.setBounds(460, 460, 180, 28);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -333,7 +335,16 @@ public class BillingWorkAreaJPanel extends javax.swing.JPanel {
         add(jLabel9);
         jLabel9.setBounds(870, 290, 360, 40);
         add(jLabel11);
-        jLabel11.setBounds(0, 0, 1790, 900);
+        jLabel11.setBounds(-90, 0, 1790, 900);
+
+        jlocation.setText("Set Location");
+        jlocation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jlocationActionPerformed(evt);
+            }
+        });
+        add(jlocation);
+        jlocation.setBounds(670, 500, 140, 30);
     }// </editor-fold>//GEN-END:initComponents
 
     private void workRequestJTableKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_workRequestJTableKeyPressed
@@ -560,28 +571,21 @@ populateTable();
  
  
  
-Logger logger = Logger.getLogger("MyLog");  
-      FileHandler fh;  
-
-    try {  
-
-        // This block configure the logger with handler and formatter  
-        fh = new FileHandler("D:/MyLogFile.log");  
-        logger.addHandler(fh);
-        SimpleFormatter formatter = new SimpleFormatter();  
-        fh.setFormatter(formatter);  
-
-        // the following statement is used to log any messages  
-        logger.info("Claimed To Government and pdf Has Been Generated for "+request.getName1());  
-
-    } catch (SecurityException e) {  
-        e.printStackTrace();  
-    } catch (IOException e) {  
-        e.printStackTrace();  
-    } 
 
 // TODO add your handling code here:
     }//GEN-LAST:event_btnGovernmentActionPerformed
+
+    private void jlocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlocationActionPerformed
+        // TODO add your handling code here:
+        
+         Maps maps = new Maps(userProcessContainer);
+        
+        userProcessContainer.add("Maps",maps);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+        
+        
+    }//GEN-LAST:event_jlocationActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -603,6 +607,7 @@ Logger logger = Logger.getLogger("MyLog");
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JButton jlocation;
     private javax.swing.JTextField labTxt;
     private javax.swing.JTable shelterTbl;
     private javax.swing.JTextField txtCurrentLocation;

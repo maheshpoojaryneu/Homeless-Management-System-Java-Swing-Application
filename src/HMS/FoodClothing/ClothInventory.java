@@ -14,10 +14,13 @@ public class ClothInventory {
     
     private ArrayList<Cloth> clothinventory;   
     private int total;
+    
+    private ArrayList<Cloth> CostSaved;
    
    public ClothInventory()
    {
        clothinventory=new ArrayList();
+       CostSaved = new ArrayList();
    }
     public ArrayList<Cloth> getClothinventory() {
         return clothinventory;
@@ -53,5 +56,17 @@ public class ClothInventory {
      }
      return total;
  }
-    
+    public Cloth addTotalCost(int clothdonatedcost)
+          {
+              Cloth cloth = new Cloth();
+              cloth.setSavedCost(clothdonatedcost);
+              CostSaved.add(cloth);
+              return cloth;
+          }
+         
+  public ArrayList<Cloth> getTotalCostSaved()
+  {
+      return CostSaved;
+  }
+  
 }

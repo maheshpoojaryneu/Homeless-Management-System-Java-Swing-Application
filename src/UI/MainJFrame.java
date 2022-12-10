@@ -301,7 +301,7 @@ public class MainJFrame extends javax.swing.JFrame {
      //   layout.next(userProcessContainer);
         
          CardLayout layout=(CardLayout)container.getLayout();
-         RegisterSelf registerself = new RegisterSelf(container, organization);
+         RegisterSelf registerself = new RegisterSelf(container, organization,"");
             container.add("RegisterSelf",registerself);
            // userAccount.getRole().createWorkArea(container, userAccount, inOrganization, inEnterprise, system,homelessdirectory
             layout.next(container);
