@@ -37,13 +37,15 @@ public class NGOFoodClothingRequestJPanel extends javax.swing.JPanel {
     private FoodInventory foodinventory;
     private ClothInventory clothinventory;
     
-    public NGOFoodClothingRequestJPanel(JPanel userProcessContainer, UserAccount account, Organization ngoOrganization, NetworkDirectory business, Enterprise enterprise) {
+    public NGOFoodClothingRequestJPanel(JPanel userProcessContainer, UserAccount account, Organization ngoOrganization, NetworkDirectory business, Enterprise enterprise, FoodInventory foodinventory, ClothInventory clothinventory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
         this.business = business;
         this.ngoOrganization = (NGOOrganization)ngoOrganization;
         this.enterprise = enterprise;
+        this.foodinventory=foodinventory;
+        this.clothinventory=clothinventory;
         populateFoodTbl();
         populateClothTbl();
     }
@@ -67,6 +69,8 @@ public class NGOFoodClothingRequestJPanel extends javax.swing.JPanel {
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
 
         clothTbl.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         clothTbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -116,31 +120,12 @@ public class NGOFoodClothingRequestJPanel extends javax.swing.JPanel {
 
         jLabel3.setText("Total Quantity Available:");
 
-        jTextField1.setText("jTextField1");
-
-        jTextField2.setText("jTextField1");
-
         jLabel4.setText("Total Quantity Available:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(8, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1738, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(750, 750, 750))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1738, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(834, 834, 834)
-                                .addComponent(jLabel1)
-                                .addGap(710, 710, 710)))
-                        .addContainerGap())))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -152,8 +137,21 @@ public class NGOFoodClothingRequestJPanel extends javax.swing.JPanel {
                         .addGap(697, 697, 697)
                         .addComponent(jLabel4)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(642, 642, 642)
+                        .addComponent(jLabel2)))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(641, 641, 641)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1276, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(462, 462, 462))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -222,7 +220,7 @@ public class NGOFoodClothingRequestJPanel extends javax.swing.JPanel {
             
         {
             Object[] row = new Object[5];
-            row[0]=food;
+            row[0]=food.getShelter();
             row[1]=food.getLocation();
             row[2]=food.getQuantity();
             row[3]=food.getProvidedby();
@@ -244,7 +242,7 @@ public class NGOFoodClothingRequestJPanel extends javax.swing.JPanel {
             
         {
             Object[] row = new Object[5];
-            row[0]=cloth;
+            row[0]=cloth.getShelter();
             row[1]=cloth.getLocation();
             row[2]=cloth.getQuantity();
             row[3]=cloth.getProvidedby();

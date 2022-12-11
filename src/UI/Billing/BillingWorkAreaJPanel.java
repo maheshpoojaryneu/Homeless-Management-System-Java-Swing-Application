@@ -79,7 +79,7 @@ public class BillingWorkAreaJPanel extends javax.swing.JPanel {
         populateTable();
         populateTable11();
         txtCurrentLocation.setText(location);
-        loc();
+        //loc();
         assignShelter.setToolTipText("Button to assign shelter on the basis of Person's location");
         btnGovernment.setToolTipText("Send the total generated bill to government for claims");
         
@@ -290,7 +290,7 @@ public class BillingWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnGovernment);
-        btnGovernment.setBounds(1090, 500, 270, 33);
+        btnGovernment.setBounds(950, 490, 270, 33);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Lab Test Price");
@@ -374,12 +374,12 @@ public class BillingWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(shelterTbl);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(1090, 350, 452, 100);
+        jScrollPane2.setBounds(950, 340, 452, 100);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel9.setText("Homeless Person Repository");
         add(jLabel9);
-        jLabel9.setBounds(1090, 290, 360, 40);
+        jLabel9.setBounds(950, 280, 360, 40);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/bills-removebg-preview.png"))); // NOI18N
         add(jLabel11);
@@ -482,7 +482,7 @@ int i=0;
         
            int i = workRequestJTable.getSelectedRow();
         //TableModel model = workRequestJTable.getModel(); 
-        txtCurrentLocation.setText(workRequestJTable.getValueAt(i,4).toString());
+       // txtCurrentLocation.setText(workRequestJTable.getValueAt(i,4).toString());
         labTxt.setText(workRequestJTable.getValueAt(i,6).toString());
         doctorTxt.setText(workRequestJTable.getValueAt(i,7).toString());
         clothTxt.setText(workRequestJTable.getValueAt(i,8).toString());

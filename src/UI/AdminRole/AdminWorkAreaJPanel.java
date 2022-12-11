@@ -100,7 +100,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         valueLabel.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         valueLabel.setText("<value>");
         add(valueLabel);
-        valueLabel.setBounds(640, 180, 180, 40);
+        valueLabel.setBounds(650, 190, 360, 30);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));

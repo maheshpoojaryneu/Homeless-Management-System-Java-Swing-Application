@@ -389,34 +389,16 @@ Organization org = null;
         
         
            try {
-            Email.sendMail("pvidhi107@gmail.com","Treatment Required for "+request.getName1(),"Information of "+request.getName1()+"has been added to the queue for Treatment . Please take necessary action");
+            Email.sendMail("maheshpoojary132@gmail.com","Treatment Required for "+request.getName1(),"Information of "+request.getName1()+"has been added to the queue for Treatment . Please take necessary action");
             
         } catch (Exception ex) {
-            Logger.getLogger(PoliceViewRecordJPanel.class.getName()).log(Level.SEVERE, null, ex);
+           JOptionPane.showMessageDialog(null, ex);
         }
            
           JOptionPane.showMessageDialog(null, "Information Sent to Doctor");  
           
           
-          Logger logger = Logger.getLogger("MyLog");  
-      FileHandler fh;  
-
-    try {  
-
-        // This block configure the logger with handler and formatter  
-        fh = new FileHandler("D:/MyLogFile.log");  
-        logger.addHandler(fh);
-        SimpleFormatter formatter = new SimpleFormatter();  
-        fh.setFormatter(formatter);  
-
-        // the following statement is used to log any messages  
-        logger.info("Request for "+doctorRequest.getName1()+"has been sent to Doctor by "+userAccount);  
-
-    } catch (SecurityException e) {  
-        e.printStackTrace();  
-    } catch (IOException e) {  
-        e.printStackTrace();  
-    } 
+    
     }//GEN-LAST:event_submitJButtonActionPerformed
 
     private void btnBillingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBillingActionPerformed

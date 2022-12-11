@@ -464,7 +464,7 @@ Organization org = null;
         
         
            try {
-            Email.sendMail("pvidhi107@gmail.com","Lab Test"+testRequiredTxt.getText()+" Required for "+request.getName1(),"Information of "+request.getName1()+"has been added to the queue for Treatment . Please take necessary action");
+            Email.sendMail("maheshpoojary132@gmail.com","Lab Test"+testRequiredTxt.getText()+" Required for "+request.getName1(),"Information of "+request.getName1()+"has been added to the queue for Treatment . Please take necessary action");
             
         } catch (Exception ex) {
             Logger.getLogger(PoliceViewRecordJPanel.class.getName()).log(Level.SEVERE, null, ex);

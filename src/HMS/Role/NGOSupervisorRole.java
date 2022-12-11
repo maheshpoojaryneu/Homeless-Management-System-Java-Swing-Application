@@ -20,7 +20,7 @@ public class NGOSupervisorRole extends Role {
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, NetworkDirectory business,HomelessDirectory homelessdirectory,FoodInventory foodinventory, ClothInventory clothinventory,String username) {
-        return new NGOSupervisorWorkAreaJPanel(userProcessContainer, account, (NGOOrganization)organization, business, enterprise);
+        return new NGOSupervisorWorkAreaJPanel(userProcessContainer, account, (NGOOrganization)organization, business, enterprise,foodinventory,clothinventory);
     }
     
 }

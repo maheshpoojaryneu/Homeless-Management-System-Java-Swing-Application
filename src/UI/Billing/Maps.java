@@ -6,6 +6,8 @@ package UI.Billing;
 
 
 import HMS.Enterprise.Enterprise;
+import HMS.FoodClothing.ClothInventory;
+import HMS.FoodClothing.FoodInventory;
 import HMS.Homeless.Homeless;
 import HMS.Homeless.HomelessDirectory;
 import HMS.Homeless.Shelter;
@@ -46,7 +48,6 @@ public class Maps extends javax.swing.JPanel {
     private HMS.LocationService.IEventWaypoint event;
     private int x;
     private int y;
-    Organization organization;
     private JPanel userProcessContainer;
     private BillingOrganization billingOrganization;
     private Enterprise enterprise;
@@ -57,16 +58,21 @@ public class Maps extends javax.swing.JPanel {
     private Network network;
      private ShelterDirectory shelterDirectory;
     private Shelter shelter;
+    private FoodInventory foodinventory;
+    private ClothInventory clothinventory;
     
     public Maps(JPanel userProcessContainer,UserAccount account, Organization organization, Enterprise enterprise, NetworkDirectory business, String location ) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.userAccount = account;
         this.billingOrganization = (BillingOrganization)organization;
+        
         this.enterprise = enterprise;
         this.business = business;
         this.homelessDirectory = new HomelessDirectory();
          this.shelterDirectory = new ShelterDirectory();
+         this.foodinventory=new FoodInventory();
+         this.clothinventory=new ClothInventory();
         initComponents();
         init();
     }
@@ -120,8 +126,8 @@ public class Maps extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(cmdAdd)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cmdClear, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cmdClear)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                 .addComponent(comboMapType, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -204,13 +210,15 @@ public class Maps extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(Maps.this, waypoint.getName());
                 String s= waypoint.getName();
        
-            BillingWorkAreaJPanel billing = new BillingWorkAreaJPanel( userProcessContainer, userAccount, organization, enterprise,business, s);
+            //BillingWorkAreaJPanel billing = new BillingWorkAreaJPanel( userProcessContainer, userAccount, organization, enterprise,business, s);
              //reg.loc.setText(s);
-           userProcessContainer.add("BillingWorkAreaJPanel", billing);
+           //userProcessContainer.add("BillingWorkAreaJPanel", billing);
 
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-       
+        //CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        //layout.next(userProcessContainer);
+       CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+            userProcessContainer.add("workArea",userAccount.getRole().createWorkArea(userProcessContainer, userAccount, billingOrganization, enterprise, business,homelessDirectory, foodinventory, clothinventory,s));
+            layout.next(userProcessContainer);
              
             }
         };

@@ -425,10 +425,10 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
             userAccount.getWorkQueue().getWorkRequestList().add(request);
         }
                try {
-            Email.sendMail("maheshpoojary132@gmail.com","New Person's Request Has Been Sent","Information of "+request.getName1()+"has been added to the queue. Please take necessary action");
+            Email.sendMail("maheshpoojary132@gmail.com","New Person's Request Has Been Sent","Information of "+request.getName1()+"has been added to the queue. Message - "+messageJTextField.getText() + "" );
             
         } catch (Exception ex) {
-            Logger.getLogger(PoliceViewRecordJPanel.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, ex);
         }
                
                
@@ -439,25 +439,7 @@ public class PoliceViewRecordJPanel extends javax.swing.JPanel {
                
                
                      
-Logger logger = Logger.getLogger("MyLog");  
-      FileHandler fh;  
 
-    try {  
-
-        // This block configure the logger with handler and formatter  
-        fh = new FileHandler("D:/MyLogFile.log");  
-        logger.addHandler(fh);
-        SimpleFormatter formatter = new SimpleFormatter();  
-        fh.setFormatter(formatter);  
-
-        // the following statement is used to log any messages  
-        logger.info("Request for "+request.getName1()+"has been sent to NGO by "+userAccount);  
-
-    } catch (SecurityException e) {  
-        e.printStackTrace();  
-    } catch (IOException e) {  
-        e.printStackTrace();  
-    } 
        
         
        } 

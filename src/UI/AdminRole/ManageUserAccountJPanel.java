@@ -122,7 +122,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         nameJTextField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         nameJTextField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         add(nameJTextField);
-        nameJTextField.setBounds(660, 570, 146, 26);
+        nameJTextField.setBounds(660, 500, 146, 26);
 
         userJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -155,13 +155,13 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         }
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(430, 200, 370, 130);
+        jScrollPane1.setBounds(430, 130, 370, 130);
 
         employeeJComboBox.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         employeeJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         employeeJComboBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         add(employeeJComboBox);
-        employeeJComboBox.setBounds(660, 440, 146, 33);
+        employeeJComboBox.setBounds(660, 370, 146, 33);
 
         backjButton1.setBackground(new java.awt.Color(0, 0, 0));
         backjButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -174,7 +174,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             }
         });
         add(backjButton1);
-        backjButton1.setBounds(220, 830, 120, 40);
+        backjButton1.setBounds(280, 690, 120, 40);
 
         organizationJComboBox.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -185,48 +185,48 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             }
         });
         add(organizationJComboBox);
-        organizationJComboBox.setBounds(660, 390, 146, 33);
+        organizationJComboBox.setBounds(660, 320, 146, 33);
 
         roleJComboBox.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         roleJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         roleJComboBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         add(roleJComboBox);
-        roleJComboBox.setBounds(660, 490, 146, 30);
+        roleJComboBox.setBounds(660, 420, 146, 30);
 
         enterpriseLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel2.setText("Password");
         add(enterpriseLabel2);
-        enterpriseLabel2.setBounds(460, 620, 170, 30);
+        enterpriseLabel2.setBounds(460, 550, 170, 30);
 
         enterpriseLabel3.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel3.setText("Organization ");
         add(enterpriseLabel3);
-        enterpriseLabel3.setBounds(460, 390, 170, 30);
+        enterpriseLabel3.setBounds(460, 320, 170, 30);
 
         enterpriseLabel4.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel4.setText("Entity/Employee");
         add(enterpriseLabel4);
-        enterpriseLabel4.setBounds(460, 440, 200, 30);
+        enterpriseLabel4.setBounds(460, 370, 200, 30);
 
         enterpriseLabel5.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel5.setText("Role");
         add(enterpriseLabel5);
-        enterpriseLabel5.setBounds(460, 490, 170, 30);
+        enterpriseLabel5.setBounds(460, 420, 170, 30);
 
         enterpriseLabel6.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         enterpriseLabel6.setText("User Name");
         add(enterpriseLabel6);
-        enterpriseLabel6.setBounds(460, 570, 170, 30);
+        enterpriseLabel6.setBounds(460, 500, 170, 30);
 
         jPasswordField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         add(jPasswordField1);
-        jPasswordField1.setBounds(660, 620, 150, 30);
+        jPasswordField1.setBounds(660, 550, 150, 30);
 
         jLabel12.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Manage User");
         add(jLabel12);
-        jLabel12.setBounds(330, 120, 580, 80);
+        jLabel12.setBounds(330, 50, 580, 80);
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);

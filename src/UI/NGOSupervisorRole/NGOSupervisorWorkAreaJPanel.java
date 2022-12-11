@@ -3,6 +3,8 @@ package UI.NGOSupervisorRole;
 
 import HMS.NetworkDirectory;
 import HMS.Enterprise.Enterprise;
+import HMS.FoodClothing.ClothInventory;
+import HMS.FoodClothing.FoodInventory;
 import HMS.Network.Network;
 import HMS.Organization.NGOOrganization;
 import HMS.Organization.Organization;
@@ -33,11 +35,12 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
     private Enterprise enterprise;
     private Network network;
     private NGOWorkRequest request;
-    
+    private FoodInventory foodinventory;
+    private ClothInventory clothinventory;
     /**
      * Creates new form LabAssistantWorkAreaJPanel
      */
-    public NGOSupervisorWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization ngoOrganization, NetworkDirectory business, Enterprise enterprise) {
+    public NGOSupervisorWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization ngoOrganization, NetworkDirectory business, Enterprise enterprise, FoodInventory foodinventory, ClothInventory clothinventory) {
         
         initComponents();
         this.userProcessContainer = userProcessContainer;
@@ -45,7 +48,8 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         this.business = business;
         this.ngoOrganization = (NGOOrganization)ngoOrganization;
         this.enterprise = enterprise;
-        
+        this.foodinventory=foodinventory;
+        this.clothinventory=clothinventory;
         populateTable();
         hiddenitems();
         processJButton.setVisible(false);
@@ -148,6 +152,7 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         calculateCostBtn1 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        fcbtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -187,21 +192,8 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jScrollPane1.setViewportView(workRequestJTable);
-        if (workRequestJTable.getColumnModel().getColumnCount() > 0) {
-            workRequestJTable.getColumnModel().getColumn(0).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(1).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(2).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(3).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(4).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(5).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(6).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(7).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(8).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(9).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(10).setResizable(false);
-        }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 1510, 150));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 1360, 150));
 
         assignJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         assignJButton.setText("Assign to me");
@@ -211,7 +203,7 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
                 assignJButtonActionPerformed(evt);
             }
         });
-        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 340, 180, -1));
+        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 180, -1));
 
         processJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         processJButton.setText("Process");
@@ -221,7 +213,7 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
                 processJButtonActionPerformed(evt);
             }
         });
-        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 840, 160, -1));
+        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 740, 160, -1));
 
         refreshJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         refreshJButton.setText("Refresh");
@@ -231,7 +223,7 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
                 refreshJButtonActionPerformed(evt);
             }
         });
-        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 110, -1));
+        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 110, -1));
 
         provideFood.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         provideFood.setText("Provide Food");
@@ -359,10 +351,18 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("NGO Work Area");
         jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1750, 70));
-
-        jLabel5.setText("jLabel5");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1400, 70));
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1750, 830));
+
+        fcbtn.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        fcbtn.setText("View Food/Clothing Inventory");
+        fcbtn.setBorder(null);
+        fcbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fcbtnActionPerformed(evt);
+            }
+        });
+        add(fcbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 99, -1, 40));
     }// </editor-fold>//GEN-END:initComponents
 int i =0;
     private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
@@ -401,25 +401,6 @@ int i =0;
        
        
        
-       Logger logger = Logger.getLogger("MyLog");  
-      FileHandler fh;  
-
-    try {  
-
-        // This block configure the logger with handler and formatter  
-        fh = new FileHandler("D:/MyLogFile.log");  
-        logger.addHandler(fh);
-        SimpleFormatter formatter = new SimpleFormatter();  
-        fh.setFormatter(formatter);  
-
-        // the following statement is used to log any messages  
-        logger.info("Request for "+workRequestJTable.getValueAt(selectedRow,2 )+"has been picked up by "+userAccount);  
-
-    } catch (SecurityException e) {  
-        e.printStackTrace();  
-    } catch (IOException e) {  
-        e.printStackTrace();  
-    }  
     
           }
         
@@ -754,6 +735,17 @@ int i =0;
         // TODO add your handling code here:
     }//GEN-LAST:event_workRequestJTableMouseClicked
 
+    private void fcbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fcbtnActionPerformed
+        // TODO add your handling code here:
+        
+        NGOFoodClothingRequestJPanel fcjpanel = new NGOFoodClothingRequestJPanel(userProcessContainer, userAccount, ngoOrganization,business, enterprise, foodinventory, clothinventory);
+        userProcessContainer.add("NGOFoodClothingRequestJPanel", fcjpanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+        
+        
+    }//GEN-LAST:event_fcbtnActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton assignJButton;
     private javax.swing.JCheckBox bottomWearChk;
@@ -765,6 +757,7 @@ int i =0;
     private javax.swing.JTextField daysTxt;
     private javax.swing.JTextField daysTxt1;
     private javax.swing.JCheckBox dinnerChk;
+    private javax.swing.JButton fcbtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -33,24 +33,24 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
      * Creates new form ClothingWorkAreaJPanel
      */
     private JPanel userProcessContainer;
-    private ClothingOrganization clothingOrganization;
+   // private ClothingOrganization clothingOrganization;
     private Enterprise enterprise;
-    private UserAccount userAccount;
-    private HomelessDirectory homelessDirectory;
-    private Homeless homeless;
+   // private UserAccount userAccount;
+  //  private HomelessDirectory homelessDirectory;
+   // private Homeless homeless;
     private NetworkDirectory business;
-    private Network network;
+   // private Network network;
     private ClothInventory clothinginventory;
     private String username;
     
     public ClothingWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, NetworkDirectory business, ClothInventory clothinventory, String username) {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
-        this.userAccount = account;
-        this.clothingOrganization = (ClothingOrganization)organization;
+        //this.userProcessContainer = userProcessContainer;
+        //this.userAccount = account;
+        //this.clothingOrganization = (ClothingOrganization)organization;
         this.enterprise = enterprise;
         this.business = business;
-        this.homelessDirectory = new HomelessDirectory();
+   //     this.homelessDirectory = new HomelessDirectory();
         this.clothinginventory=clothinventory;
         this.username=username;
         populateTbl();
@@ -68,7 +68,6 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         quantityTxt = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        updateBtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         locationTxt = new javax.swing.JTextField();
@@ -77,7 +76,6 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
         jComboBox1 = new javax.swing.JComboBox<>();
         date = new com.toedter.calendar.JDateChooser();
         donateBtn1 = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
@@ -87,15 +85,6 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         jLabel2.setText("Location:");
-
-        updateBtn.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
-        updateBtn.setText("Update");
-        updateBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        updateBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateBtnActionPerformed(evt);
-            }
-        });
 
         jLabel3.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         jLabel3.setText("Donated On:");
@@ -137,17 +126,6 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        backJButton.setBackground(new java.awt.Color(0, 0, 0));
-        backJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
-        backJButton.setForeground(new java.awt.Color(255, 255, 255));
-        backJButton.setText("<< Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
-            }
-        });
-
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/clothes-removebg-preview.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -156,9 +134,6 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(200, 200, 200)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -177,9 +152,7 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
                             .addComponent(quantityTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
                             .addComponent(date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(392, 392, 392)
-                        .addComponent(updateBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(102, 102, 102)
+                        .addGap(614, 614, 614)
                         .addComponent(donateBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 550, Short.MAX_VALUE)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -193,12 +166,8 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(updateBtn)
-                    .addComponent(donateBtn1))
-                .addGap(157, 157, 157)
-                .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addComponent(donateBtn1)
+                .addGap(219, 219, 219))
             .addGroup(layout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -235,44 +204,10 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_clothTblMouseClicked
 
-    private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
-        // TODO add your handling code here:
-        
-        int selectedRowIndex = clothTbl.getSelectedRow();
-
-        if (selectedRowIndex<0)
-        {
-            JOptionPane.showMessageDialog(this,"Please select a row to edit!");
-            return;
-        }
-
-        DefaultTableModel model = (DefaultTableModel) clothTbl.getModel();
-        Cloth selectedDetail = (Cloth) model.getValueAt(selectedRowIndex,0);
-
-
-        String shelter = jComboBox1.toString();
-        String location = locationTxt.getText();
-        int quantity = Integer.parseInt(quantityTxt.getText());
-        SimpleDateFormat dformat = new SimpleDateFormat("yyyy-MM-dd");
-        String donatedOn = dformat.format(date.getDate());
-        
-        int index=clothinginventory.getClothinventory().indexOf(selectedDetail);
-        Cloth cloth= clothinginventory.updateInventory(index, selectedDetail);
-
-        cloth.setShelter(shelter);
-        cloth.setLocation(location);
-        cloth.setQuantity(quantity);
-        cloth.setDonatedon(donatedOn);
-        cloth.setProvidedby(username);
-        populateTbl();
-     
-       
-    }//GEN-LAST:event_updateBtnActionPerformed
-
     private void donateBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_donateBtn1ActionPerformed
         // TODO add your handling code here:
         
-        String shelter = jComboBox1.toString();
+        String shelter = jComboBox1.getSelectedItem().toString();
       
         String location = locationTxt.getText();
         int quantity = Integer.parseInt(quantityTxt.getText());
@@ -281,13 +216,13 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
         String donatedOn = dformat.format(date.getDate());
         
         
-        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList())
-       {
+     //   for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList())
+       //{
            
-               if(organization.getName().contains("Cloth Organization"))
-            {
+         //      if(organization.getName().contains("Cloth Organization"))
+           // {
            try{
-               JOptionPane.showMessageDialog(null, enterprise);
+              // JOptionPane.showMessageDialog(null, enterprise);
                   clothinginventory.addToInventory(shelter, location, quantity, username, donatedOn);
                       // organization.getFoodinventory().addToInventory(shelter, location, quantity, username, donatedOn);
                        JOptionPane.showMessageDialog(null, "Added");
@@ -303,8 +238,8 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
            {
                JOptionPane.showMessageDialog(null, e);
            }
-            }
-       }
+            //}
+       //}
     // org.getFoodinventory().addToInventory(shelter,location,quantity, username, donatedOn);
       // JOptionPane.showMessageDialog(null, "Added");
      //  JOptionPane.showMessageDialog(null, org);
@@ -324,17 +259,8 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_donateBtn1ActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-        userProcessContainer.remove(this);
-        Component[] componentArray = userProcessContainer.getComponents();
-        Component component = componentArray[componentArray.length - 1];
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
     private javax.swing.JTable clothTbl;
     private com.toedter.calendar.JDateChooser date;
     private javax.swing.JButton donateBtn1;
@@ -347,7 +273,6 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField locationTxt;
     private javax.swing.JTextField quantityTxt;
-    private javax.swing.JButton updateBtn;
     // End of variables declaration//GEN-END:variables
 
     private void populateTbl() {
@@ -356,11 +281,11 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
         
         
-          for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList())
-       {
+       //   for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList())
+       //{
            
-               if(organization.getName().contains("Cloth Organization"))
-              {
+         //      if(organization.getName().contains("Cloth Organization"))
+           //   {
                    for (Cloth cloth : clothinginventory.getClothinventory())
         {
             if(cloth.getProvidedby().equals(username))
@@ -377,8 +302,8 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
         //}
        
        
-    }
-              }
+    //}
+      //        }
        
     
     }

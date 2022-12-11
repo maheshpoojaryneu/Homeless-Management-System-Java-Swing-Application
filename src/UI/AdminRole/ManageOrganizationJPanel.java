@@ -39,7 +39,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         if(x.equals("Hospital"))
         {
             for (Type type : Organization.Type.values()){
-            if (!type.getValue().equals(Type.Admin.getValue()) && !type.getValue().equals(Type.Police.getValue()) && !type.getValue().equals(Type.NGO.getValue()))
+            if (!type.getValue().equals(Type.Admin.getValue()) && !type.getValue().equals(Type.Police.getValue()) && !type.getValue().equals(Type.NGO.getValue()) && !type.getValue().equals(Type.Restaurant.getValue()) && !type.getValue().equals(Type.ClothingOutlet.getValue()))
                 organizationJComboBox.addItem(type);
         }
         }
@@ -47,7 +47,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
            else if(x.equals("Governement"))
         {
             for (Type type : Organization.Type.values()){
-            if (!type.getValue().equals(Type.Admin.getValue()) && !type.getValue().equals(Type.Doctor.getValue()) && !type.getValue().equals(Type.Lab.getValue()) && !type.getValue().equals(Type.Billing.getValue()))
+            if (!type.getValue().equals(Type.Admin.getValue()) && !type.getValue().equals(Type.Doctor.getValue()) && !type.getValue().equals(Type.Lab.getValue()) && !type.getValue().equals(Type.Billing.getValue()) && !type.getValue().equals(Type.Restaurant.getValue()) && !type.getValue().equals(Type.ClothingOutlet.getValue()) )
                 organizationJComboBox.addItem(type);
         }
 //        for (Type type : Organization.Type.values()){
@@ -59,6 +59,14 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         {
             for (Type type : Organization.Type.values()){
             if (!type.getValue().equals(Type.Admin.getValue()) && !type.getValue().equals(Type.Doctor.getValue()) && !type.getValue().equals(Type.Lab.getValue()) && !type.getValue().equals(Type.Billing.getValue()) && !type.getValue().equals(Type.ClothingOutlet.getValue()) && !type.getValue().equals(Type.Police.getValue()) && !type.getValue().equals(Type.NGO.getValue()) )
+                organizationJComboBox.addItem(type);
+        }
+        }
+            
+            else if(x.equals("Clothing"))
+        {
+            for (Type type : Organization.Type.values()){
+            if (!type.getValue().equals(Type.Admin.getValue()) && !type.getValue().equals(Type.Doctor.getValue()) && !type.getValue().equals(Type.Lab.getValue()) && !type.getValue().equals(Type.Billing.getValue()) && !type.getValue().equals(Type.Restaurant.getValue()) && !type.getValue().equals(Type.Police.getValue()) && !type.getValue().equals(Type.NGO.getValue()) )
                 organizationJComboBox.addItem(type);
         }
 //        for (Type type : Organization.Type.values()){

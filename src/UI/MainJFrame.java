@@ -68,7 +68,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         loginJLabel = new javax.swing.JLabel();
         logoutJButton = new javax.swing.JButton();
-        signupJButton = new javax.swing.JButton();
         container = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -111,17 +110,6 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        signupJButton.setBackground(new java.awt.Color(204, 204, 255));
-        signupJButton.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
-        signupJButton.setText("Sign Up");
-        signupJButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        signupJButton.setDoubleBuffered(true);
-        signupJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                signupJButtonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -134,12 +122,10 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(userNameJTextField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(signupJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(logoutJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(loginJLabel))))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(logoutJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(loginJLabel)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addComponent(loginJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -165,9 +151,7 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addComponent(loginJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(logoutJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addComponent(signupJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(755, Short.MAX_VALUE))
+                .addContainerGap(809, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);
@@ -296,25 +280,6 @@ public class MainJFrame extends javax.swing.JFrame {
         dB4OUtil.storeSystem(system,foodinventory,clothinventory);
     }//GEN-LAST:event_logoutJButtonActionPerformed
 
-    private void signupJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupJButtonActionPerformed
-        // TODO add your handling code here:
-        //RegisterSelf registerself  = new RegisterSelf(userProcessContainer, enterprise);
-        //userProcessContainer.add("RegisterSelf", registerself);
-
-   //     CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-     //   layout.next(userProcessContainer);
-        
-         CardLayout layout=(CardLayout)container.getLayout();
-         RegisterSelf registerself = new RegisterSelf(container, organization);
-            container.add("RegisterSelf",registerself);
-           // userAccount.getRole().createWorkArea(container, userAccount, inOrganization, inEnterprise, system,homelessdirectory
-            layout.next(container);
-            loginJButton.setEnabled(false);
-        logoutJButton.setEnabled(true);
-            signupJButton.setEnabled(false);
-            
-    }//GEN-LAST:event_signupJButtonActionPerformed
-
     private void userNameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameJTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_userNameJTextFieldActionPerformed
@@ -366,7 +331,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel loginJLabel;
     private javax.swing.JButton logoutJButton;
     public static javax.swing.JPasswordField passwordField;
-    private javax.swing.JButton signupJButton;
     public javax.swing.JTextField userNameJTextField;
     // End of variables declaration//GEN-END:variables
 }

@@ -99,7 +99,7 @@ public class AddHomelessPersonJPanel extends javax.swing.JPanel {
         clothingChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         clothingChk.setText("Clothing Required");
         add(clothingChk);
-        clothingChk.setBounds(1010, 610, 220, 26);
+        clothingChk.setBounds(1000, 520, 220, 26);
 
         treatmentChk.setBackground(new java.awt.Color(255, 255, 255));
         treatmentChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -110,7 +110,7 @@ public class AddHomelessPersonJPanel extends javax.swing.JPanel {
             }
         });
         add(treatmentChk);
-        treatmentChk.setBounds(1010, 670, 220, 26);
+        treatmentChk.setBounds(1000, 580, 220, 26);
 
         saveBtn.setBackground(new java.awt.Color(0, 0, 0));
         saveBtn.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
@@ -148,7 +148,7 @@ public class AddHomelessPersonJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(homelessTbl);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(0, 320, 1310, 170);
+        jScrollPane1.setBounds(0, 320, 1310, 150);
 
         btnUpdate.setBackground(new java.awt.Color(0, 0, 0));
         btnUpdate.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
@@ -167,7 +167,7 @@ public class AddHomelessPersonJPanel extends javax.swing.JPanel {
         foodChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         foodChk.setText("Food Required");
         add(foodChk);
-        foodChk.setBounds(1010, 730, 220, 26);
+        foodChk.setBounds(1000, 640, 220, 26);
 
         deleteBtn.setBackground(new java.awt.Color(0, 0, 0));
         deleteBtn.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
@@ -191,12 +191,12 @@ public class AddHomelessPersonJPanel extends javax.swing.JPanel {
             }
         });
         add(criminalChk);
-        criminalChk.setBounds(1010, 790, 220, 26);
+        criminalChk.setBounds(1000, 700, 220, 26);
 
         jLabel4.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel4.setText("Gender:");
         add(jLabel4);
-        jLabel4.setBounds(560, 790, 100, 20);
+        jLabel4.setBounds(550, 700, 100, 20);
 
         addHomelessBtn.setBackground(new java.awt.Color(0, 0, 0));
         addHomelessBtn.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
@@ -209,50 +209,50 @@ public class AddHomelessPersonJPanel extends javax.swing.JPanel {
             }
         });
         add(addHomelessBtn);
-        addHomelessBtn.setBounds(770, 850, 310, 37);
+        addHomelessBtn.setBounds(760, 760, 310, 37);
 
         txtName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         add(txtName);
-        txtName.setBounds(660, 610, 240, 30);
+        txtName.setBounds(650, 520, 240, 30);
 
         txtAge.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtAge.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         add(txtAge);
-        txtAge.setBounds(660, 670, 240, 30);
+        txtAge.setBounds(650, 580, 240, 30);
 
         txtLocation.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtLocation.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         add(txtLocation);
-        txtLocation.setBounds(660, 730, 240, 30);
+        txtLocation.setBounds(650, 640, 240, 30);
 
         txtGender.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtGender.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         add(txtGender);
-        txtGender.setBounds(660, 790, 240, 30);
+        txtGender.setBounds(650, 700, 240, 30);
 
         jLabel11.setBackground(new java.awt.Color(204, 204, 204));
         jLabel11.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Manage Homeless Person");
-        jLabel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 0, 13), new java.awt.Color(102, 102, 102))); // NOI18N
+        jLabel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
         add(jLabel11);
         jLabel11.setBounds(0, 0, 1310, 80);
 
         jLabel8.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel8.setText("Name:");
         add(jLabel8);
-        jLabel8.setBounds(560, 610, 100, 30);
+        jLabel8.setBounds(550, 520, 100, 30);
 
         jLabel10.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel10.setText("Age:");
         add(jLabel10);
-        jLabel10.setBounds(560, 670, 100, 21);
+        jLabel10.setBounds(550, 580, 100, 21);
 
         jLabel12.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel12.setText("Location:");
         add(jLabel12);
-        jLabel12.setBounds(560, 730, 100, 20);
+        jLabel12.setBounds(550, 640, 100, 20);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -271,11 +271,11 @@ public class AddHomelessPersonJPanel extends javax.swing.JPanel {
             }
         });
         add(backJButton);
-        backJButton.setBounds(20, 840, 120, 40);
+        backJButton.setBounds(40, 760, 120, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/8727545.jpg"))); // NOI18N
         add(jLabel1);
-        jLabel1.setBounds(10, 360, 760, 780);
+        jLabel1.setBounds(10, 340, 760, 780);
     }// </editor-fold>//GEN-END:initComponents
 
     private void saveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtnActionPerformed
