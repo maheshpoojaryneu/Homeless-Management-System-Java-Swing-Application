@@ -70,6 +70,9 @@ private int TotalQuantity;
         this.TotalQuantity = TotalQuantity;
         return TotalQuantity;
     }
+    
+      
+ 
   public ArrayList<Food> getTotalCost()
   {
       return TotalCost;

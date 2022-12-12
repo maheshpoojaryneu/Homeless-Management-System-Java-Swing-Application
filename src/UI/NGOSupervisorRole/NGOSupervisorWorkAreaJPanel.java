@@ -3,7 +3,9 @@ package UI.NGOSupervisorRole;
 
 import HMS.NetworkDirectory;
 import HMS.Enterprise.Enterprise;
+import HMS.FoodClothing.Cloth;
 import HMS.FoodClothing.ClothInventory;
+import HMS.FoodClothing.Food;
 import HMS.FoodClothing.FoodInventory;
 import HMS.Network.Network;
 import HMS.Organization.NGOOrganization;
@@ -13,6 +15,7 @@ import HMS.WorkQueue.DoctorWorkRequest;
 import HMS.WorkQueue.NGOWorkRequest;
 import HMS.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
+import static java.awt.Component.BOTTOM_ALIGNMENT;
 import java.io.IOException;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
@@ -21,6 +24,11 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartFrame;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PiePlot;
+import org.jfree.data.general.DefaultPieDataset;
 
 /**
  *
@@ -153,6 +161,7 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         fcbtn = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -243,7 +252,7 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
                 provideClothingActionPerformed(evt);
             }
         });
-        add(provideClothing, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 430, 210, -1));
+        add(provideClothing, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 420, 210, -1));
 
         daysTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add(daysTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 490, 120, -1));
@@ -270,7 +279,7 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
 
         saveBtn.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
         saveBtn.setText("Save");
-        saveBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        saveBtn.setBorder(null);
         saveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveBtnActionPerformed(evt);
@@ -298,26 +307,26 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
 
         jacketChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jacketChk.setText("Jacket");
-        add(jacketChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 550, -1, -1));
+        add(jacketChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 540, -1, -1));
 
         topWearChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         topWearChk.setText("Top Wear");
-        add(topWearChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 600, -1, -1));
+        add(topWearChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 590, -1, -1));
 
         bottomWearChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         bottomWearChk.setText("Bottom Wear");
-        add(bottomWearChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 650, -1, -1));
+        add(bottomWearChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 640, -1, -1));
 
         thermalChk.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         thermalChk.setText("Thermals");
-        add(thermalChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 700, -1, -1));
+        add(thermalChk, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 690, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Number Of Days");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 490, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 480, -1, -1));
 
         daysTxt1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(daysTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 490, 130, -1));
+        add(daysTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 480, 130, -1));
 
         saveBtn1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         saveBtn1.setText("Save");
@@ -327,10 +336,10 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
                 saveBtn1ActionPerformed(evt);
             }
         });
-        add(saveBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 740, -1, -1));
+        add(saveBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 730, -1, -1));
 
         costTxt1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(costTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1350, 610, 90, -1));
+        add(costTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 600, 90, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -345,7 +354,7 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
                 calculateCostBtn1ActionPerformed(evt);
             }
         });
-        add(calculateCostBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 660, -1, -1));
+        add(calculateCostBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 650, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -365,6 +374,16 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(fcbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 99, 330, 40));
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setText("Cost Saved");
+        jButton1.setBorder(null);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 740, 130, 50));
     }// </editor-fold>//GEN-END:initComponents
 int i =0;
     private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
@@ -566,8 +585,36 @@ int i =0;
            count = count+1;
        }
         total = count * days * 10;
-        costTxt.setText(String.valueOf(total));
+        
+        
+         if(count * days >foodinventory.foodtotal())
+        {
+        int fooddonatedcost = foodinventory.foodtotal() * 10;
+        int saved = total - fooddonatedcost;
+        
+        
+        foodinventory.addTotalCost(saved);
+        
+        costTxt.setText(String.valueOf(saved));
          JOptionPane.showMessageDialog(null, "Food Cost Calculated Successfully");
+        }
+        else if(foodinventory.foodtotal()>count * days)
+        {
+        int fooddonatedcost = count * days * 10;
+        int saved = fooddonatedcost;
+        
+        
+        foodinventory.addTotalCost(saved);
+        
+        costTxt.setText(String.valueOf(0));
+         JOptionPane.showMessageDialog(null, "Food Cost Calculated Successfully");
+        }
+        else
+        {
+             costTxt.setText(String.valueOf(total));
+         JOptionPane.showMessageDialog(null, "Food Cost Calculated Successfully");
+       
+        }
         
        }
        
@@ -719,10 +766,41 @@ int i =0;
        }
         total1 = count1 * days1 * 10;
         
-        costTxt1.setText(String.valueOf(total1));
+        if(count1 * days1 >clothinventory.clothtotal())
+        {
+        int clothdonatedcost=clothinventory.clothtotal() * 10;
+        int saved = total1 - clothdonatedcost;
+        
+       clothinventory.addTotalCost(saved);
+       
+        
+        costTxt1.setText(String.valueOf(saved));
         
          JOptionPane.showMessageDialog(null, "Cloth Cost Calculated Successfully");
-          
+        }
+      
+      else if(clothinventory.clothtotal()> count1 * days1)
+      {
+          int clothdonatedcost= count1 * days1 * 10;
+        int saved = clothdonatedcost;
+        
+       clothinventory.addTotalCost(saved);
+       
+        
+        costTxt1.setText(String.valueOf(0));
+        
+         JOptionPane.showMessageDialog(null, "Cloth Cost Calculated Successfully");
+
+      }
+        else
+        {
+            costTxt1.setText(String.valueOf(total1));
+        
+         JOptionPane.showMessageDialog(null, "Cloth Cost Calculated Successfully");
+      
+        }
+
+   
        }
       
 // TODO add your handling code here:
@@ -748,6 +826,35 @@ int i =0;
         
     }//GEN-LAST:event_fcbtnActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+         int foodsum=0;
+        for(Food food : foodinventory.getTotalCost())
+        {
+            foodsum = foodsum + food.getTotalCost();
+            
+        }
+        
+        int clothsum=0;
+        for(Cloth cloth : clothinventory.getTotalCostSaved())
+        {
+            clothsum = clothsum + cloth.getSavedCost();
+            
+        }
+        
+        DefaultPieDataset piedataset = new DefaultPieDataset();
+        piedataset.setValue("Cost saved on Food", foodsum );
+        piedataset.setValue("Cost saved on Clothing",clothsum);
+        
+        JFreeChart chart = ChartFactory.createPieChart("Pie Chart", piedataset,true,true,true);
+        PiePlot P = (PiePlot)chart.getPlot();
+        P.setForegroundAlpha(BOTTOM_ALIGNMENT);
+        ChartFrame frame = new ChartFrame("Pie Chart", chart);
+        frame.setVisible(true);
+        frame.setSize(450,500);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton assignJButton;
     private javax.swing.JCheckBox bottomWearChk;
@@ -760,6 +867,7 @@ int i =0;
     private javax.swing.JTextField daysTxt1;
     private javax.swing.JCheckBox dinnerChk;
     private javax.swing.JButton fcbtn;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
