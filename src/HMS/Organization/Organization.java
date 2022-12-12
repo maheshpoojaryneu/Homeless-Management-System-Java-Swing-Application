@@ -26,7 +26,7 @@ public abstract class Organization {
     private ClothInventory clothinventory;
     
     public enum Type{
-        Admin("Admin Organization"), Police("Police Organization"), NGO("NGO Organization"), Doctor("Doctor Organization"),Lab("Lab Organization"),Billing("Billing Organization"), Self("Self Organization"), Restaurant("Food Organization"),ClothingOutlet("Clothing Organization");
+        Admin("Admin Organization"), Police("Police Organization"), NGO("NGO Organization"), Doctor("Doctor Organization"),Lab("Lab Organization"),Billing("Billing Organization"), Restaurant("Food Organization"),ClothingOutlet("Clothing Organization");
         private String value;
         private Type(String value) {
             this.value = value;

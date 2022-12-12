@@ -78,18 +78,20 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
         donateBtn1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel1.setText("Shelter:");
 
-        quantityTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        quantityTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel2.setText("Location:");
 
-        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel3.setText("Donated On:");
 
-        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel6.setText("Quantity Provided:");
 
         locationTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
@@ -114,12 +116,18 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(clothTbl);
 
-        jComboBox1.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jComboBox1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cambridge", "Boston", "Wrentham", "New York", "Park Drive" }));
+        jComboBox1.setAutoscrolls(true);
+        jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
-        donateBtn1.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        date.setBackground(new java.awt.Color(255, 255, 255));
+
+        donateBtn1.setBackground(new java.awt.Color(0, 0, 0));
+        donateBtn1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
+        donateBtn1.setForeground(new java.awt.Color(255, 255, 255));
         donateBtn1.setText("Donate");
-        donateBtn1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        donateBtn1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         donateBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 donateBtn1ActionPerformed(evt);
@@ -153,10 +161,10 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
                             .addComponent(date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(614, 614, 614)
-                        .addComponent(donateBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 550, Short.MAX_VALUE)
+                        .addComponent(donateBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+                .addGap(280, 280, 280))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 47, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1741, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -165,15 +173,11 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(donateBtn1)
-                .addGap(219, 219, 219))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel1)
@@ -186,9 +190,14 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
                             .addComponent(locationTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6)
                             .addComponent(quantityTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 271, Short.MAX_VALUE))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                        .addContainerGap(333, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(donateBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(190, 190, 190))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -225,7 +234,7 @@ public class ClothingWorkAreaJPanel extends javax.swing.JPanel {
               // JOptionPane.showMessageDialog(null, enterprise);
                   clothinginventory.addToInventory(shelter, location, quantity, username, donatedOn);
                       // organization.getFoodinventory().addToInventory(shelter, location, quantity, username, donatedOn);
-                       JOptionPane.showMessageDialog(null, "Added");
+                       JOptionPane.showMessageDialog(null, quantity +" units of cloth have been donated. Thank You!");
                    populateTbl();
               //     organization.getFoodinventory().addToInventory(shelter,location,quantity, username, donatedOn);
             //       JOptionPane.showMessageDialog(null, "Added");

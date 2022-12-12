@@ -14,7 +14,6 @@ import HMS.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import UI.volunteer.RegisterSelf;
 import javax.swing.JFrame;
 
 
@@ -94,9 +93,11 @@ public class MainJFrame extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/User name.png"))); // NOI18N
         jLabel1.setText("User Name");
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/password.png"))); // NOI18N
         jLabel2.setText("Password");
 
         logoutJButton.setBackground(new java.awt.Color(204, 204, 255));

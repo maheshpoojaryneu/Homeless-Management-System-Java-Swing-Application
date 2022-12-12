@@ -53,11 +53,7 @@ public class OrganizationDirectory {
             organization = new FoodOrganization();
             organizationList.add(organization);
         }
-        else if (type.getValue().equals(Type.Self.getValue())){
-            organization = new SelfOrganization();
-            organizationList.add(organization);
-        }
-        
+   
         
         return organization;
     }

@@ -78,31 +78,39 @@ public class FoodWorkAreaJPanel extends javax.swing.JPanel {
         foodTbl = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
 
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel1.setText("Shelter:");
 
-        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel2.setText("Location:");
 
-        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel3.setText("Donated On:");
 
-        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel6.setText("Quantity Provided:");
 
-        locationTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        locationTxt.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
 
-        jButton1.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        quantityTxt.setFont(new java.awt.Font("Trebuchet MS", 2, 18)); // NOI18N
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Donate");
-        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 4));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jComboBox1.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jComboBox1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cambridge", "Boston", "Wrentham", "New York", "Park Drive" }));
+        jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
         foodTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -146,11 +154,11 @@ public class FoodWorkAreaJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(quantityTxt)
                             .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(873, Short.MAX_VALUE))
+                .addContainerGap(784, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(205, 205, 205)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(232, 232, 232)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(407, 407, 407))
         );
@@ -174,12 +182,12 @@ public class FoodWorkAreaJPanel extends javax.swing.JPanel {
                     .addComponent(quantityTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGap(27, 27, 27)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -222,7 +230,7 @@ public class FoodWorkAreaJPanel extends javax.swing.JPanel {
                //JOptionPane.showMessageDialog(null, enterprise);
                   foodinventory.addToInventory(shelter, location, quantity, username, donatedOn);
                       // organization.getFoodinventory().addToInventory(shelter, location, quantity, username, donatedOn);
-                       JOptionPane.showMessageDialog(null, "Added");
+                       JOptionPane.showMessageDialog(null, quantity +" units of cloth have been donated. Thank You!");
                    populateTbl();
               //     organization.getFoodinventory().addToInventory(shelter,location,quantity, username, donatedOn);
             //       JOptionPane.showMessageDialog(null, "Added");

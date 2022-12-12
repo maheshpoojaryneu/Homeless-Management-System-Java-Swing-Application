@@ -44,7 +44,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         }
         }
            
-           else if(x.equals("Governement"))
+           else if(x.equals("Government"))
         {
             for (Type type : Organization.Type.values()){
             if (!type.getValue().equals(Type.Admin.getValue()) && !type.getValue().equals(Type.Doctor.getValue()) && !type.getValue().equals(Type.Lab.getValue()) && !type.getValue().equals(Type.Billing.getValue()) && !type.getValue().equals(Type.Restaurant.getValue()) && !type.getValue().equals(Type.ClothingOutlet.getValue()) )

@@ -7,7 +7,6 @@ import HMS.Homeless.Homeless;
 import HMS.Homeless.HomelessDirectory;
 import HMS.Network.Network;
 import HMS.Organization.BillingOrganization;
-import HMS.Organization.LabOrganization;
 import HMS.Organization.Organization;
 import HMS.UserAccount.UserAccount;
 import HMS.WorkQueue.BillingWorkQueue;
@@ -78,7 +77,15 @@ public class BillingWorkAreaJPanel extends javax.swing.JPanel {
         btnGovernment.setVisible(false);
         populateTable();
         populateTable11();
-        txtCurrentLocation.setText(location);
+        if(location.contains("billing"))
+        {
+            txtCurrentLocation.setText("");
+        }
+        else
+        {
+            txtCurrentLocation.setText(location);
+        }
+        
         //loc();
         assignShelter.setToolTipText("Button to assign shelter on the basis of Person's location");
         btnGovernment.setToolTipText("Send the total generated bill to government for claims");
@@ -242,7 +249,7 @@ public class BillingWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(workRequestJTable);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(250, 110, 1280, 96);
+        jScrollPane1.setBounds(40, 100, 1280, 96);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("Current Location");
@@ -385,14 +392,18 @@ public class BillingWorkAreaJPanel extends javax.swing.JPanel {
         add(jLabel11);
         jLabel11.setBounds(0, 0, 1790, 900);
 
+        locationbtn.setBackground(new java.awt.Color(0, 0, 0));
+        locationbtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        locationbtn.setForeground(new java.awt.Color(255, 255, 255));
         locationbtn.setText("Set Location");
+        locationbtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         locationbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 locationbtnActionPerformed(evt);
             }
         });
         add(locationbtn);
-        locationbtn.setBounds(780, 500, 120, 23);
+        locationbtn.setBounds(780, 500, 120, 30);
     }// </editor-fold>//GEN-END:initComponents
 
     private void workRequestJTableKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_workRequestJTableKeyPressed
@@ -617,27 +628,7 @@ populateTable();
  JOptionPane.showMessageDialog(null, "Claimed To Government and pdf Has Been Generated");
  
  
- 
- 
-Logger logger = Logger.getLogger("MyLog");  
-      FileHandler fh;  
 
-    try {  
-
-        // This block configure the logger with handler and formatter  
-        fh = new FileHandler("D:/MyLogFile.log");  
-        logger.addHandler(fh);
-        SimpleFormatter formatter = new SimpleFormatter();  
-        fh.setFormatter(formatter);  
-
-        // the following statement is used to log any messages  
-        logger.info("Claimed To Government and pdf Has Been Generated for "+request.getName1());  
-
-    } catch (SecurityException e) {  
-        e.printStackTrace();  
-    } catch (IOException e) {  
-        e.printStackTrace();  
-    } 
 
 // TODO add your handling code here:
     }//GEN-LAST:event_btnGovernmentActionPerformed

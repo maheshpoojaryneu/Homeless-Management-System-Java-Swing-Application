@@ -34,11 +34,8 @@ public class EnterpriseDirectory {
         else if(type==Enterprise.EnterpriseType.Hospital){
             enterprise=new HospitalEnterprise(name);
             enterpriseList.add(enterprise);
-        }
-        else if(type==Enterprise.EnterpriseType.Volunteer){
-            enterprise=new VolunteerEnterprise(name);
-            enterpriseList.add(enterprise);
-        }
+        }   
+        
          else if(type==Enterprise.EnterpriseType.Food){
             enterprise=new FoodEnterprise(name);
             enterpriseList.add(enterprise);

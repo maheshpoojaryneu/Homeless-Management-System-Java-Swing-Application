@@ -352,17 +352,19 @@ public class NGOSupervisorWorkAreaJPanel extends javax.swing.JPanel {
         jLabel8.setText("NGO Work Area");
         jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1400, 70));
+
+        jLabel5.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1750, 830));
 
-        fcbtn.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        fcbtn.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         fcbtn.setText("View Food/Clothing Inventory");
-        fcbtn.setBorder(null);
+        fcbtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         fcbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fcbtnActionPerformed(evt);
             }
         });
-        add(fcbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 99, -1, 40));
+        add(fcbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 99, 330, 40));
     }// </editor-fold>//GEN-END:initComponents
 int i =0;
     private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed

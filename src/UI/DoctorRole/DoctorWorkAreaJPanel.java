@@ -228,26 +228,7 @@ int i =0;
        
        
        
-       Logger logger = Logger.getLogger("MyLog");  
-      FileHandler fh;  
-
-    try {  
-
-        // This block configure the logger with handler and formatter  
-        fh = new FileHandler("D:/MyLogFile.log");  
-        logger.addHandler(fh);
-        SimpleFormatter formatter = new SimpleFormatter();  
-        fh.setFormatter(formatter);  
-
-        // the following statement is used to log any messages  
-        logger.info("Request for "+workRequestJTable.getValueAt(selectedRow,2 )+"has been picked up by "+userAccount);  
-
-    } catch (SecurityException e) {  
-        e.printStackTrace();  
-    } catch (IOException e) {  
-        e.printStackTrace();  
-    }  
-
+    
         }
     }//GEN-LAST:event_assignJButtonActionPerformed
 
